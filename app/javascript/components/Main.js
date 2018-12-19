@@ -1,17 +1,18 @@
-import React from "react"
-import NavBar from "./_navbar.js.jsx"
-import Topic from "./_topic.js.jsx"
-import App from "./_app.js.jsx"
+import React from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import App from './_app.js';
+import NavBar from './_navbar.js';
 
-class Main extends React.Component {
-  render() {
-    return(
-      <div>
+const Main = () => (
+  <Router>
+    <Switch>
+    <div>
       <NavBar />
       <App />
-      </div>
-    )
-  }
-}
+    </div>
+    </Switch>
+  </Router>
+);
 
-export default Main
+
+export default Main;

@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
+
 import Quotes from "./_poli-quotes.js.jsx";
+import Topic from "./_topic.js";
+
 
 class App extends React.Component {
   state = {
@@ -30,31 +34,36 @@ class App extends React.Component {
             <button>Agree</button>
           </Modal>
         </div>
-        <h2>Current Topics</h2>
-        <div className="topics">
-          <div className="section group">
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 1</a>
-            </div>
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 2</a>
-            </div>
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 3</a>
+        <Route exact={true} path="/" render={() => (
+          <div>
+            <h2>Current Topics</h2>
+            <div className="topics">
+              <div className="section group">
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/1">KeyStone XL</Link>
+                </div>
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/2">Topic2</Link>
+                </div>
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/3">Topic3</Link>
+                </div>
+              </div>
+              <div className="section group">
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/4">Topic4</Link>
+                </div>
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/5">Topic5</Link>
+                </div>
+                <div className="col span_1_of_3 hometopics">
+                  <Link to="/topics/6">Topic6</Link>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="section group">
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 4</a>
-            </div>
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 5</a>
-            </div>
-            <div className="col span_1_of_3 hometopics">
-              <a href="/"> Topic 6</a>
-            </div>
-          </div>
-        </div>
+        )}/>
+        <Route path="/topics/1" component={Topic} />
       </div>
     );
   }
