@@ -1,16 +1,17 @@
-import React from "react"
+import React from 'react';
+import Modal from 'react-responsive-modal';
+import Quotes from "./_poli-quotes.js.jsx";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { open: false };
+  state = {
+    open: false
   };
 
-  onOpenModal() {
+  onOpenModal = () => {
     this.setState({ open: true });
   };
 
-  onCloseModal() {
+  onCloseModal = () => {
     this.setState({ open: false });
   };
 
@@ -18,9 +19,17 @@ class App extends React.Component {
     const { open } = this.state;
     return (
       <div className="App">
-      <div>
-        <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
-      </div>
+        <div>
+          <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
+        </div>
+        <div>
+          <Modal open={open} onClose={this.onCloseModal} center>
+            <h2>Find Your Match</h2>
+            <Quotes />
+            <button>Disagree</button>
+            <button>Agree</button>
+          </Modal>
+        </div>
         <h2>Current Topics</h2>
         <div className="topics">
           <div className="section group">
@@ -51,4 +60,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;

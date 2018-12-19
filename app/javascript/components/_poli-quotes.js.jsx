@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 class Quotes extends React.Component {
   constructor(props) {
@@ -19,4 +19,4 @@ class Quotes extends React.Component {
   }
 }
 
-export default Quotes
+export default Quotes;

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 class Topic extends React.Component {
   render() {
@@ -56,4 +56,4 @@ class Topic extends React.Component {
   }
 }
 
-export default Topic
+export default Topic;

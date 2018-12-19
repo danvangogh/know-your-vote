@@ -1,3 +1,176 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 10px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 1% 1% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hometopics {
+  background-color: #d0d0d0;
+  font-size: 24px;
+  line-height: 75px;
+  text-align: center;
+  height: 75px;
+}
+
+.navbar {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  background-color: #d8d8d8;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subtitle {
+  width: 100%;
+  float: right;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+/*  GRID OF THREE   ============================================================================= */
+
+.span_3_of_3 {
+  width: 100%;
+}
+
+.span_2_of_3 {
+  width: 66.13%;
+}
+
+.span_1_of_3 {
+  width: 32.26%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .span_3_of_3 {
+    width: 100%;
+  }
+  .span_2_of_3 {
+    width: 100%;
+  }
+  .span_1_of_3 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col:first-child {
+    margin-left: 0;
+  }
+}
+
+/*  GRID OF EIGHT   ============================================================================= */
+
+.span_8_of_8 {
+  width: 100%;
+}
+
+.span_7_of_8 {
+  width: 87.3%;
+}
+
+.span_6_of_8 {
+  width: 74.6%;
+}
+
+.span_5_of_8 {
+  width: 61.9%;
+}
+
+.span_4_of_8 {
+  width: 49.2%;
+}
+
+.span_3_of_8 {
+  width: 36.5%;
+}
+
+.span_2_of_8 {
+  width: 23.8%;
+}
+
+.span_1_of_8 {
+  width: 11.1%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .span_8_of_8 {
+    width: 100%;
+  }
+  .span_7_of_8 {
+    width: 100%;
+  }
+  .span_6_of_8 {
+    width: 100%;
+  }
+  .span_5_of_8 {
+    width: 100%;
+  }
+  .span_4_of_8 {
+    width: 100%;
+  }
+  .span_3_of_8 {
+    width: 100%;
+  }
+  .span_2_of_8 {
+    width: 100%;
+  }
+  .span_1_of_8 {
+    width: 100%;
+  }
+}
+
+.party-results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+  margin: 1em 6em 0 6em;
+}
+
+.quote-holder {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-gap: 2em;
+  grid-auto-rows: center;
+}
+
+.icon {
+  align-self: center;
+  justify-self: center;
+}
