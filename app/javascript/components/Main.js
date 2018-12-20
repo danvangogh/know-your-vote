@@ -1,18 +1,56 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import React, {Component} from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import App from './_app.js';
 import NavBar from './_navbar.js';
+import TopicPage from './_TopicPage.js.jsx'
+import TopicsPage from './_TopicsPage.js.jsx'
+import axios from 'axios';
 
-const Main = () => (
-  <Router>
-    <Switch>
-    <div>
-      <NavBar />
-      <App />
-    </div>
-    </Switch>
-  </Router>
-);
+class Main extends Component {
+  constructor(props){
+    super(props)
+  }
+  state = {
+    open: false,
+    topics: [],
+    currentTopic: null
+  };
 
+  componentDidMount() {
+    console.log("componentDidMount")
+    axios.get('/topics')
+      .then((response) => {
+        console.log("data:", response.data);
+        this.setState({
+          topics: response.data
+        }, () => {
+          console.log(this.state)
+        })
+      })
+      .catch(function (error) {
+        return error;
+      });
+    }
+
+    render() {
+      console.log("this.state = ", this.state)
+      return(
+        <Router>
+        <div>
+          <NavBar />
+          <Switch>
+            <Route path='/topics/:topic' render={
+              (routerProps) => <TopicPage {...routerProps} topics={{'Joel-is-dash': "More things!"}}/>
+            }/>
+            <Route path='/' exact component={TopicsPage} topics={this.state.topics}/>
+            <Route path='/' render={
+              () => <Redirect to='/'/>
+            }/>
+          </Switch>
+        </div>
+        </Router>
+      );
+    }
+}
 
 export default Main;

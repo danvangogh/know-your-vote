@@ -5,12 +5,19 @@ class Topic extends React.Component {
     super(props);
   }
   render() {
+
+    const Name = ({props}) => {
+      return(
+        <h2>{props.match.params.name}</h2>
+      )
+    }
+
     return(
       <body>
         <div className="container">
           <div className="row">
             <div className="col-8">
-              <h2>{`${this.props.name}`}</h2>
+              <h2>{ Name }</h2>
               <h3>FACT</h3>
               <br/>
               <h3>THE 'WHAT'</h3>

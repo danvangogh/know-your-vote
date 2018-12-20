@@ -8,7 +8,8 @@ import axios from 'axios';
 class App extends React.Component {
   state = {
     open: false,
-    topics: []
+    topics: [],
+    currentTopic: null
   };
 
   onOpenModal = () => {
@@ -32,10 +33,15 @@ componentDidMount() {
     .catch(function (error) {
       return error;
     });
-}
+  }
+
+  topicSet = () => {
+    this.setState({ currentTopic: topic.id})
+  }
+
   render() {
     const { open } = this.state;
-    return (
+    return(
       <div className="App">
         <div>
           <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
@@ -53,8 +59,8 @@ componentDidMount() {
             <h2>Current Topics</h2>
             {
               this.state.topics.map((topic, index) => {
-                return (
-                  <div className="col span_1_of_3 hometopics" key={index}>
+                return(
+                  <div className="col span_1_of_3 hometopics" key={topic.id}>
                     <Link to={`/topics/${topic.name}`} className="title">
                       <span className="topic">{topic.name}</span>
                     </Link>
@@ -64,7 +70,9 @@ componentDidMount() {
             }
           </div>
         )}/>
-       <Route path="/topics/" component={Topic} topics={this.state.topics} />
+       <Route path="/topics" component={(Topic) => (
+         this.props.match
+       )}/>
       </div>
     )
   };
