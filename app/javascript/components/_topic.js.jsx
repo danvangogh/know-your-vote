@@ -3,8 +3,8 @@ import React from 'react';
 const Topic = () => (
   <body>
     <div className="container">
+      <h2>SOME PROJECT</h2>
       <div className="row">
-        <h2>THE KEYSTONE XL PROJECT</h2>
         <div className="col-8">
           <h3>FACT</h3>
           <br />

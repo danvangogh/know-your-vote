@@ -4,6 +4,7 @@ import Modal from 'react-responsive-modal';
 
 import Quotes from "./_poli-quotes.js.jsx";
 import Topic from "./_topic.js";
+import TabTopic from './_tabtopic.js.jsx';
 
 class App extends React.Component {
   state = {
@@ -37,38 +38,51 @@ class App extends React.Component {
           <div>
             <h2>Current Topics</h2>
             <div className="topics">
-              <div className="section group">
-                <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/keystone" className="title">
-                    <span className="topic">KeyStone XL</span>
-                    <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
+              <div className="card-deck">
+                <div className="card hometopics">
+                  <Link to="/topics/blah" className="title">
+                      <span className="card-body topic">KeyStone XL</span>
+                      <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="col span_1_of_3 hometopics">
+                <div className="card hometopics">
                   <Link to="/topics/cannabis" className="title">
                     <span className="topic">Legalised Cannabis</span>
                     <img src={require('../../assets/images/cannabis.jpg')} alt="cannabis" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/carbontax" className="title">Carbon Tax</Link>
+                <div className="card hometopics">
+                  <Link to="/topics/keystone" className="title">
+                      <span className="card-body topic">KeyStone XL</span>
+                      <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
+                  </Link>
                 </div>
               </div>
-              <div className="section group">
-                <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/housing" className="title">Subsidised Housing</Link>
+              <div className="card-deck">
+                <div className="card hometopics">
+                  <Link to="/topics/representation" className="title">
+                    <span className="topic">Proportional Representation</span>
+                    <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
+                  </Link>
                 </div>
-                <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/representation" className="title">Proportional Represenation</Link>
+                <div className="card hometopics">
+                  <Link to="/topics/representation" className="title">
+                    <span className="topic">Subsidized Housing</span>
+                    <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
+                  </Link>
                 </div>
-                <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/hair" className="title">Prince Eric's Hair</Link>
+                <div className="card hometopics">
+                  <Link to="/topics/representation" className="title">
+                    <span className="topic">Prince Eric's Hair</span>
+                    <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         )}/>
-        <Route path="/topics/keystone" component={Topic} />
+        <Route path="/topics/blah" component={Topic} />
+        <Route path="/topics/cannabis" component={TabTopic} />
       </div>
     );
   }
