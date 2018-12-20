@@ -10,10 +10,13 @@ class Quotes extends React.Component {
       GRN: 0
     };
   }
+
   render() {
     return (
       <div>
-        <p>"Hello, all of us pledging allegiance to the stars..."</p>
+        <p>
+          &ldquo;Hello, all of us pledging allegiance to the stars...&rdquo;
+        </p>
       </div>
     );
   }

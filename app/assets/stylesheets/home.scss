@@ -18,11 +18,11 @@
 }
 
 .hometopics {
+  min-height: 134px;
+  padding: 0;
   background-color: #d0d0d0;
   font-size: 24px;
-  line-height: 75px;
   text-align: center;
-  height: 75px;
 }
 
 .navbar {
@@ -30,6 +30,16 @@
   text-align: center;
   height: 60px;
   background-color: #d8d8d8;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -40,6 +50,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .topic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 6px;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 100%;
+    opacity: 0.7;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
 }
 
 .subtitle {

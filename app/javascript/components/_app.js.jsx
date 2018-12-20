@@ -5,7 +5,6 @@ import Modal from 'react-responsive-modal';
 import Quotes from "./_poli-quotes.js.jsx";
 import Topic from "./_topic.js";
 
-
 class App extends React.Component {
   state = {
     open: false
@@ -40,30 +39,36 @@ class App extends React.Component {
             <div className="topics">
               <div className="section group">
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/1">KeyStone XL</Link>
+                  <Link to="/topics/keystone" className="title">
+                    <span className="topic">KeyStone XL</span>
+                    <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
+                  </Link>
                 </div>
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/2">Topic2</Link>
+                  <Link to="/topics/cannabis" className="title">
+                    <span className="topic">Legalised Cannabis</span>
+                    <img src={require('../../assets/images/cannabis.jpg')} alt="cannabis" className="img-responsive" />
+                  </Link>
                 </div>
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/3">Topic3</Link>
+                  <Link to="/topics/carbontax" className="title">Carbon Tax</Link>
                 </div>
               </div>
               <div className="section group">
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/4">Topic4</Link>
+                  <Link to="/topics/housing" className="title">Subsidised Housing</Link>
                 </div>
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/5">Topic5</Link>
+                  <Link to="/topics/representation" className="title">Proportional Represenation</Link>
                 </div>
                 <div className="col span_1_of_3 hometopics">
-                  <Link to="/topics/6">Topic6</Link>
+                  <Link to="/topics/hair" className="title">Prince Eric's Hair</Link>
                 </div>
               </div>
             </div>
           </div>
         )}/>
-        <Route path="/topics/1" component={Topic} />
+        <Route path="/topics/keystone" component={Topic} />
       </div>
     );
   }
