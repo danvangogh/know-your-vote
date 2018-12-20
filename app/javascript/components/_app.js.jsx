@@ -38,40 +38,40 @@ class App extends React.Component {
           <div>
             <h2>Current Topics</h2>
             <div className="topics">
-              <div className="card-deck">
-                <div className="card hometopics">
+              <div className="card-deck section group">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/blah" className="title">
                       <span className="card-body topic">KeyStone XL</span>
                       <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="card hometopics">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/cannabis" className="title">
                     <span className="topic">Legalised Cannabis</span>
                     <img src={require('../../assets/images/cannabis.jpg')} alt="cannabis" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="card hometopics">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/keystone" className="title">
                       <span className="card-body topic">KeyStone XL</span>
                       <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
                   </Link>
                 </div>
               </div>
-              <div className="card-deck">
-                <div className="card hometopics">
+              <div className="card-deck section group">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/representation" className="title">
                     <span className="topic">Proportional Representation</span>
                     <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="card hometopics">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/representation" className="title">
                     <span className="topic">Subsidized Housing</span>
                     <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
                   </Link>
                 </div>
-                <div className="card hometopics">
+                <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/representation" className="title">
                     <span className="topic">Prince Eric's Hair</span>
                     <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
