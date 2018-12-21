@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
-import Main from './Main.js'
-import axios from 'axios';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 function TopicsPage({ topics }) {
