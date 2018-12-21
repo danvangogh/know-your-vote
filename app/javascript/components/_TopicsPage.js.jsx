@@ -13,7 +13,7 @@ function TopicsPage({ topics }) {
               <div className="card col span_1_of_3 hometopics" key={topic.id}>
                 <Link to={`/topics/${topic.name}/${topic.id}`} className="title" params={{ id: topic.id }}>
                   <span className="topic">{topic.name}</span>
-                  <img src={require('../../assets/images/prop-rep.jpg')} alt="proportional-representation" className="img-responsive" />
+                  <img src={topic.photo_url} alt={topic.name} className="img-responsive" />
                 </Link>
               </div>
             );
