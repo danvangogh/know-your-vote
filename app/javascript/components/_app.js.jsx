@@ -54,7 +54,7 @@ class App extends React.Component {
                 <div className="card col span_1_of_3 hometopics">
                   <Link to="/topics/keystone" className="title">
                       <span className="card-body topic">KeyStone XL</span>
-                      <img src={require('../../assets/images/keystone.jpg')} alt="keystone-pipeline" className="img-responsive" />
+                      <img src='https://i.ibb.co/74f0L8w/cannabis.jpg' alt="keystone-pipeline" className="img-responsive" />
                   </Link>
                 </div>
               </div>
