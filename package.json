@@ -13,6 +13,7 @@
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "0.0.0",
     "webpack-dev-server": "2.11.2"
   }
 }
