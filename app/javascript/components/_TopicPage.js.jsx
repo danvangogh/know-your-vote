@@ -8,10 +8,9 @@ class TopicPage extends Component {
   state = {
     topic: null
   };
+  
   componentDidMount() {
-    console.log('THIS THIS THE ID: ', this.props.match.params.id);
     const id = this.props.match.params.id;
-
     axios.get(`/topics/${id}`)
       .then((response) => {
         console.log('new data:', response.data);

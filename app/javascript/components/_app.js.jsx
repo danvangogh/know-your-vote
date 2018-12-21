@@ -3,7 +3,6 @@ import { Link, Route } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 
 import Quotes from "./_poli-quotes.js.jsx";
-import Topic from "./_topic.js";
 import TabTopic from './_tabtopic.js.jsx';
 import axios from 'axios';
 
