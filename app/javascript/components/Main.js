@@ -17,40 +17,37 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    console.log("componentDidMount")
+    console.log("componentDidMount");
     axios.get('/topics')
       .then((response) => {
         console.log("data:", response.data);
-        this.setState({
-          topics: response.data
-        }, () => {
+        this.setState({ topics: response.data }, () => {
           console.log(this.state)
-        })
+        }).bind(this)
       })
       .catch(function (error) {
         return error;
       });
-    }
 
-    render() {
-      console.log("this.state = ", this.state)
-      return(
-        <Router>
-        <div>
-          <NavBar />
-          <Switch>
-            <Route path='/topics/:topic' render={
-              (routerProps) => <TopicPage {...routerProps} topics={{'Joel-is-dash': "More things!"}}/>
-            }/>
-            <Route path='/' exact component={TopicsPage} topics={this.state.topics}/>
-            <Route path='/' render={
-              () => <Redirect to='/'/>
-            }/>
-          </Switch>
-        </div>
-        </Router>
-      );
-    }
+  }
+
+  render() {
+    console.log("this.state = ", this.state)
+    return(
+      <Router>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route path='/topics/:topic' render={(routerProps) => 
+            <TopicPage {...routerProps} topics={this.state.topics}/> }/>
+          <Route path='/' exact render={(routerProps) =>
+            <TopicsPage {...routerProps} topics={this.state.topics}/> } />
+          <Route path='/' render={() => <Redirect to='/'/>}/>
+        </Switch>
+      </div>
+      </Router>
+    );
+  }
 }
 
 export default Main;
