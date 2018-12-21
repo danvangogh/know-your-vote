@@ -4,29 +4,26 @@ import Main from './Main.js'
 import axios from 'axios';
 import Topic from "./_topic.js.jsx"
 
-class TopicsPage extends Component {
-  constructor(props) {
-    super(props)
-  }
+function keyPass(num) {
+  event.preventDefault;
+  console.log('hey budddddyyyy', num);
+}
 
-  render() {
-    return(
-      <div>
-        <h2>Current Topics</h2>
-        {
-          this.props.topics.map((topic, index) => {
-            return(
-              <div className="col span_1_of_3 hometopics" key={topic.id}>
-                <Link to={`/topics/${topic.name}`} className="title">
-                  <span className="topic">{topic.name}</span>
-                </Link>
-              </div>
-            )
-          })
-        }
-      </div>
-    )
-  }
+function TopicsPage({ topics }) {
+  return (
+    <div>
+      <h2>Current Topics</h2>
+      { topics.map((topic, index) => { 
+        return (
+          <div className="col span_1_of_3 hometopics" key={topic.id}>
+            <Link to={`/topics/${topic.name}/${topic.id}`} className="title" params={{ id: topic.id }}>
+              <span className="topic">{topic.name}</span>
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default TopicsPage;

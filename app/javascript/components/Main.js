@@ -38,7 +38,7 @@ class Main extends Component {
       <div>
         <NavBar />
         <Switch>
-          <Route path='/topics/:topic' render={(routerProps) => 
+          <Route path='/topics/:topic/:id' render={(routerProps) => 
             <TopicPage {...routerProps} topics={this.state.topics}/> }/>
           <Route path='/' exact render={(routerProps) =>
             <TopicsPage {...routerProps} topics={this.state.topics}/> } />

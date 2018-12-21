@@ -5,7 +5,6 @@ class Topic extends React.Component {
     super(props);
   }
   render() {
-
     const Name = ({props}) => {
       return(
         <h2>{props.match.params.name}</h2>

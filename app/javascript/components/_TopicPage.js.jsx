@@ -1,36 +1,58 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
+import axios from 'axios';
 
 class TopicPage extends Component {
-  constructor(props) {
+  constructor(props){
     super(props)
+  }
+  state = {
+    topic: null
+  };
+  componentDidMount() {
+    console.log('THIS THIS THE ID: ', this.props.match.params.id);
+    const id = this.props.match.params.id;
+
+    axios.get(`/topics/${id}`)
+      .then((response) => {
+        console.log('new data:', response.data);
+        this.setState({ topic: response.data }, () => {
+          console.log(this.state)
+        })
+      })
+      .catch(function (error) {
+        return error;
+      })
   }
 
   render() {
-    console.log("What are the props - topicPage: ", this.props);
-    return(
-    <body>
+    console.log('What are the props - topicPage: ', this.props);
+    console.log('What is the state - topicPage: ', this.state);
+    
+    if (!this.state.topic) {
+      return <p>Loading...</p>
+    }
+    let {description, good, bad} = this.state.topic
+
+    return (
+    
       <div className="container">
-        <h2>{this.props.match.params.topic}: {this.props.topics[this.props.match.params.topic]}</h2>
+        <h2>Topic</h2>
         <div className="row">
           <div className="col-8">
             <h3>FACT</h3>
             <br />
             <h3>THE &lsquo;WHAT&rsquo;</h3>
             <p>
-              These enemies must be found. Our conscience cannot rest so long as nearly 45 million Americans don&apos;t have health insurance and the millions more who do are going bankrupt trying to pay for it. But it also means binding our particular grievances - for better health care, and better schools, and better jobs - to the larger aspirations of all Americans - the white woman struggling to break the glass ceiling, the white man whose been laid off, the immigrant trying to feed his family. But if we see this conflict only from one side or the other, then we will be blind to the truth: the only resolution is for the aspirations of both sides to be met through two states, where Israelis and Palestinians each live in peace and security.
-  
-              And the lack of basic services in so many urban black neighborhoods - parks for kids to play in, police walking the beat, regular garbage pick-up and building code enforcement - all helped create a cycle of violence, blight and neglect that continue to haunt us. Indeed, none of us should tolerate these extremists.
+              {description}
             </p>
             <h4>THE &lsquo;GOOD&rsquo;</h4>
             <p>
-              The fact is that the comments that have been made and the issues that have surfaced over the last few weeks reflect the complexities of race in this country that we&apos;ve never really worked through - a part of our union that we have yet to perfect. And occasionally it finds voice in the church on Sunday morning, in the pulpit and in the pews. And that&apos; to be expected.
-  
-              We are one people, all of us pledging allegiance to the stars and stripes, all of us defending the United States of America. Wright deliver a sermon called &ldquo;The Audacity of Hope.&rdquo; And during the course of that sermon, he introduced me to someone named Jesus Christ.
+              {good}
             </p>
             <h4>THE &lsquo;BAD&rsquo;</h4>
             <p>
-              And I&apos;ve found that no matter where I am, or who I&apos;m talking to, there&apos;s a common theme that emerges. I&apos;ll recruit an army of new teachers, and pay them higher salaries and give them more support. Together, you represent the harmony between tradition and progress. Violent extremists have exploited these tensions in a small but potent minority of Muslims. That is the responsibility we have to one another as human beings. Given our interdependence, any world order that elevates one nation or group of people over another will inevitably fail.
+              {bad}
             </p>
           </div>
           <div className="col-4">
@@ -66,7 +88,7 @@ class TopicPage extends Component {
           </div>
         </div>
       </div>
-    </body>
+  
     );
   }
 }
