@@ -70,9 +70,7 @@ componentDidMount() {
             }
           </div>
         )}/>
-       <Route path="/topics" component={(Topic) => (
-         this.props.match
-       )}/>
+       <Route path="/topics" component={(Topic) => (this.props.match)}/>
       </div>
     )
   };
