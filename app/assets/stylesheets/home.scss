@@ -18,11 +18,10 @@
 }
 
 .hometopics {
+  padding: 0;
   background-color: #d0d0d0;
   font-size: 24px;
-  line-height: 75px;
   text-align: center;
-  height: 75px;
 }
 
 .navbar {
@@ -32,11 +31,42 @@
   background-color: #d8d8d8;
 }
 
-.title {
-  width: 100%;
-  text-align: center;
+.name {
   font-size: 24px;
   font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+
+  .topic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 6px;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .subtitle {
@@ -173,4 +203,50 @@
 .icon {
   align-self: center;
   justify-self: center;
+}
+
+/*  TABS */
+
+.tabs {
+  border: 1px solid rgb(236, 236, 236);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  padding: 0.5rem 0.75rem;
+  background-color: rgb(236, 236, 236);
+}
+
+.tab-list-active {
+  background-color: white;
+  border: 1px 0px white;
+  border-width: 1px 0px 1px 1px;
+}
+
+.tab-content {
+  background-color: white;
+  border: solid white;
+  border-width: 1px 1px 0 1px;
+}
+
+.card-header {
+  padding-top: 1em;
+}
+
+.tab-list {
+  margin: 0;
+  padding-top: 8px;
+  background-color: rgb(236, 236, 236);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid white;
+  padding-left: 0;
+}
+
+.tab-list-item.tab-list-active {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }

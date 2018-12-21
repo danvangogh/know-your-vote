@@ -26,34 +26,24 @@ class TopicPage extends Component {
   }
 
   render() {
-    console.log('What are the props - topicPage: ', this.props);
-    console.log('What is the state - topicPage: ', this.state);
-    
     if (!this.state.topic) {
       return <p>Loading...</p>
     }
-    let {description, good, bad} = this.state.topic
+    let {description, good, bad, name} = this.state.topic
 
     return (
-    
       <div className="container">
-        <h2>Topic</h2>
+        <h2>{name}</h2>
         <div className="row">
           <div className="col-8">
             <h3>FACT</h3>
             <br />
             <h3>THE &lsquo;WHAT&rsquo;</h3>
-            <p>
-              {description}
-            </p>
+            <p>{description}</p>
             <h4>THE &lsquo;GOOD&rsquo;</h4>
-            <p>
-              {good}
-            </p>
+            <p>{good}</p>
             <h4>THE &lsquo;BAD&rsquo;</h4>
-            <p>
-              {bad}
-            </p>
+            <p>{bad}</p>
           </div>
           <div className="col-4">
             <h3>OPINIONS</h3>
