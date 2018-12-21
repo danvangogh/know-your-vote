@@ -17,9 +17,12 @@
   justify-content: center;
 }
 
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 100%;
+}
 .hometopics {
   padding: 0;
-  background-color: #d0d0d0;
   font-size: 24px;
   text-align: center;
 }
