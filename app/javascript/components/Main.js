@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import NavBar from './_navbar.js';
 import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
+import Cards from './_Cards.js.jsx'
 import axios from 'axios';
 
 class Main extends Component {
@@ -16,7 +17,6 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    console.log("componentDidMount");
     axios.get('/topics')
       .then((response) => {
         console.log("data:", response.data);
@@ -31,13 +31,17 @@ class Main extends Component {
   }
 
   render() {
-    console.log("this.state = ", this.state)
     return(
       <Router>
       <div>
         <NavBar />
+        <Cards />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <Switch>
-          <Route path='/topics/:topic/:id' render={(routerProps) => 
+          <Route path='/topics/:topic/:id' render={(routerProps) =>
             <TopicPage {...routerProps} topics={this.state.topics}/> }/>
           <Route path='/' exact render={(routerProps) =>
             <TopicsPage {...routerProps} topics={this.state.topics}/> } />

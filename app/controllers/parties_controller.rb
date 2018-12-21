@@ -7,7 +7,7 @@ class PartiesController < ApplicationController
 
   def show
     @party = Product.find params[:id]
-    render json: party
+    render json: @party
   end
 
 end
