@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
+import MediaQuery from 'react-responsive';
 import Quotes from "./_poli-quotes.js.jsx";
 
 
@@ -25,9 +26,11 @@ class NavBar extends React.Component {
       <div>
         <div className="navbar">
           <Link to="/" className="name">KNOW YOUR VOTE</Link>
-          <span className="poli-match-button">
-          <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
-        </span>
+          <MediaQuery minWidth={576}>
+            <span className="poli-match-button">
+              <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
+            </span>
+          </MediaQuery>
         </div>
         <div>
           <Modal open={open} onClose={this.onCloseModal} center>

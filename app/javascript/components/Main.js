@@ -4,6 +4,7 @@ import NavBar from './_navbar.js';
 import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
 import axios from 'axios';
+import MediaQuery from 'react-responsive';
 
 class Main extends Component {
   constructor(props){
@@ -33,18 +34,31 @@ class Main extends Component {
   render() {
     console.log("this.state = ", this.state)
     return(
-      <Router>
       <div>
-        <NavBar />
-        <Switch>
-          <Route path='/topics/:topic/:id' render={(routerProps) => 
-            <TopicPage {...routerProps} topics={this.state.topics}/> }/>
-          <Route path='/' exact render={(routerProps) =>
-            <TopicsPage {...routerProps} topics={this.state.topics}/> } />
-          <Route path='/' render={() => <Redirect to='/'/>}/>
-        </Switch>
+        <Router>
+          <div>
+            <NavBar />
+            <Switch>
+              <Route path='/topics/:topic/:id' render={(routerProps) => 
+                <TopicPage {...routerProps} topics={this.state.topics}/> }/>
+              <Route path='/' exact render={(routerProps) =>
+                <TopicsPage {...routerProps} topics={this.state.topics}/> } />
+              <Route path='/' render={() => <Redirect to='/'/>}/>
+            </Switch>
+          </div>
+        </Router>
+        <MediaQuery maxWidth={575}>
+          <footer className="mobile-footer">
+            <div className="home-icon">
+              <i className="fas fa-home"></i>
+            </div>
+            <p className="split">|</p>
+            <div className="heart-icon">
+              <i className="far fa-heart"></i>
+            </div>
+          </footer>
+        </MediaQuery>
       </div>
-      </Router>
     );
   }
 }

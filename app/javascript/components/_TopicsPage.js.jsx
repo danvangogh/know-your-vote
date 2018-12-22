@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 function TopicsPage({ topics }) {
   console.log('what is the arrayy?@@?@?@', topics);
   return (
-    <div>
-      <h2>Current Topics</h2>
+    <div className="current-topics">
+      <h2 className="all-topics">Current Topics</h2>
       <div className="topics">
         <div className="card-deck section group">
           { topics.map((topic) => {
