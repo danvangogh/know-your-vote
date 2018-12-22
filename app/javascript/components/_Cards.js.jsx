@@ -37,11 +37,8 @@ class Cards extends Component {
     }
 
     const qLength = this.state.quotes.length
-    console.log("data: ", this.state.quotes)
     const quoteIndex = this.generateRandom(0, qLength - 1)
-    console.log("quoteIndex: ", quoteIndex)
     const randomQuote = this.state.quotes[quoteIndex];
-    console.log("randomQuote", randomQuote)
 
     return (
       <div>
@@ -51,11 +48,14 @@ class Cards extends Component {
               <h4 className="quote">{randomQuote.text}
               </h4>
               <div className="buttons">
-                <button className="dissBtn" >Dislike</button>
+                <button
+                  className="dissBtn"
+                  onClick={() => this.props.leftSwipe(randomQuote.party_id)}>Dislike
+                </button>
                 <button
                   className="likeBtn"
-                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}
-                >Like</button>
+                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}>Like
+                </button>
               </div>
             </div>
 

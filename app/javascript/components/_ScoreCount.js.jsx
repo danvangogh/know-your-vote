@@ -7,7 +7,7 @@ class ScoreCount extends Component {
   render() {
     return (
       <div>
-        <h6>GRN: {this.props.count[5]} / NDP: {this.props.count[6]} / LIB: {this.props.count[7]} / CP: {this.props.count[8]}</h6>
+        <h6>GRN: {this.props.count[5]} / NDP: {this.props.count[6]} / LIB: {this.props.count[7]} / CP: {this.props.count[8]} / Question: {this.props.question}</h6>
       </div>
     )
   }

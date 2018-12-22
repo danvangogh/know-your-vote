@@ -8,7 +8,7 @@ class Game extends Component {
     super(props)
 
     this.state = {
-
+      question: 1,
       scores: {
         5: 0,
         6: 0,
@@ -17,32 +17,36 @@ class Game extends Component {
       },
     }
 
-    this.rightSwipe = this.rightSwipe.bind(this)
+    this.rightSwipe = this.rightSwipe.bind(this);
+    this.leftSwipe = this.leftSwipe.bind(this);
   }
 
   rightSwipe(voted_party_id) {
-    // let grn = this.state.GRN;
-    // this.setState({
-    //   GRN: grn + 1
-    // })
-
-    // this.setState((oldState) => {
-    //   let oldGrn = oldState.GRN;
-    //   return {GRN: oldGrn + 1};
-    // })
-
-    this.setState(({scores}) => {
+    this.setState(({scores, question}) => {
       let newScores = {...scores}; // make a copy
       newScores[voted_party_id] = (newScores[voted_party_id]||0) + 1;
-      return {scores: newScores};
+      let newQuestion = question;
+      newQuestion = newQuestion + 1;
+      console.log("done Right")
+      return {scores: newScores, question: newQuestion};
     });
   }
+  leftSwipe(voted_party_id) {
+    this.setState(({scores, question}) => {
+      let newScores = {...scores};
+      let newQuestion = question;
+      newQuestion = newQuestion + 1;
+      console.log("done Left")
+      return {scores: newScores, question: newQuestion};
+    });
+  }
+
   render() {
     console.log("this.state:", this.state);
     return (
       <div>
-        <Cards rightSwipe={this.rightSwipe}/>
-        <ScoreCount count={this.state.scores}/>
+        <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe}/>
+        <ScoreCount count={this.state.scores} question={this.state.question}/>
       </div>
     )
   }
