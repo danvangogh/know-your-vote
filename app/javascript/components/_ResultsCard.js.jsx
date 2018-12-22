@@ -5,34 +5,38 @@ class ResultsCard extends Component {
   constructor(props){
     super(props)
   }
-
   render() {
-    if (this.state.quotes.length === 0) {
-      return <p>Loading...</p>
-    }
-
-    const qLength = this.state.quotes.length
-    const quoteIndex = this.generateRandom(0, qLength - 1)
-    const randomQuote = this.state.quotes[quoteIndex];
-
     return (
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
             <div className="mobile-matched-with quotearea">
-              <h4 className="quote">{randomQuote.text}</h4>
-              <div className="buttons">
-                <button
-                  className="dissBtn"
-                  onClick={() => this.props.leftSwipe(randomQuote.party_id)}>Dislike
-                </button>
-                <button
-                  className="likeBtn"
-                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}>Like
-                </button>
-              </div>
+              <span className="announcement">
+                <h4>You Matched With...</h4>
+              </span>
             </div>
-
+            <div className="matched-with">
+              <span className="image">
+                <img className="match-photo image" src="https://i.ibb.co/fnv8fZt/justin-trudeau-prime-minister-canada.jpg" />
+              </span>
+            </div>
+            <div className="matched-with">
+              <span className="leader-result quotearea">
+                <h5>Justin Trudeau</h5>
+                <h6>Liberal Party</h6>
+              </span>
+            </div>
+            <br />
+            <div className="matched-with">
+              <div className=""></div>
+              <div className=""></div>
+              <div className="party-result">GRN: 1</div>
+              <div className="party-result">NDP: 4</div>
+              <div className="party-result">LIB: 3</div>
+              <div className="party-result">CP: 2</div>
+              <div className=""></div>
+              <div className=""></div>
+            </div>
           </div>
         </section>
       </div>
@@ -40,4 +44,4 @@ class ResultsCard extends Component {
   }
 }
 
-export default Cards;
+export default ResultsCard;
