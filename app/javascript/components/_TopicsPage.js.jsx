@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 function TopicsPage({ topics }) {
-  console.log('what is the arrayy?@@?@?@', topics);
   return (
     <div className="current-topics">
       <h2 className="all-topics">Current Topics</h2>

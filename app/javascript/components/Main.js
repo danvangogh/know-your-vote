@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import NavBar from './_navbar.js';
 import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
@@ -45,19 +45,21 @@ class Main extends Component {
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
               <Route path='/' render={() => <Redirect to='/'/>}/>
             </Switch>
+            <MediaQuery maxWidth={575}>
+              <footer className="mobile-footer">
+                <div className="home-icon">
+                  <Link to="/">
+                    <i className="fas fa-home"></i>
+                  </Link>
+                </div>
+                <p className="split">|</p>
+                <div className="heart-icon">
+                  <i className="far fa-heart"></i>
+                </div>
+              </footer>
+            </MediaQuery>
           </div>
         </Router>
-        <MediaQuery maxWidth={575}>
-          <footer className="mobile-footer">
-            <div className="home-icon">
-              <i className="fas fa-home"></i>
-            </div>
-            <p className="split">|</p>
-            <div className="heart-icon">
-              <i className="far fa-heart"></i>
-            </div>
-          </footer>
-        </MediaQuery>
       </div>
     );
   }
