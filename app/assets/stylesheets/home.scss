@@ -200,3 +200,13 @@ $main-font: 'Francois One', sans-serif;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 570px;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
