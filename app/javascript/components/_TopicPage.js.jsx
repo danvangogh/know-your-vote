@@ -3,8 +3,6 @@ import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Tabs from './Tabs';
 
-import {  WindowWidthWatcher, WindowWidthConsumer } from  "./windowWidth.js";
-
 class TopicPage extends Component {
   constructor(props){
     super(props)
