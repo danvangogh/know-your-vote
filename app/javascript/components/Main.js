@@ -4,6 +4,7 @@ import NavBar from './_navbar.js';
 import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
 import Cards from './_Cards.js.jsx'
+import Game from './_Game.js.jsx'
 import axios from 'axios';
 
 class Main extends Component {
@@ -35,7 +36,7 @@ class Main extends Component {
       <Router>
       <div>
         <NavBar />
-        <Cards />
+        <Game />
         <br/>
         <br/>
         <br/>

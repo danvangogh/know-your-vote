@@ -1,0 +1,85 @@
+.mobile-footer {
+    background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    text-align:center;
+    padding:20px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(7 1fr);
+    grid-template-areas:
+    ". a . . c . . b ."
+    ;
+}
+
+.heart-icon {
+  grid-area: b;
+  font-size: 1em;
+}
+
+.home-icon {
+  grid-area: a;
+  font-size: 1em;
+}
+
+.split {
+  grid-area: c;
+}
+
+/* <section class="mobile-quote-area">
+<div class="mobile-quote-body">
+<span class="quotearea"> */
+
+.mobile-quote-area {
+  width: 100%;
+  height: 100%
+}
+
+.mobile-quote-body {
+  width: 100%;
+  background-color: tomato;
+}
+
+.results-card {
+  width: 100%;
+  align-content: center;
+}
+
+.mobile-matched-with {
+	display: grid;
+	grid-template-columns:repeat(8, 1fr);
+	justify-items: center;
+	grid-template-areas:
+	"a a a a a a a a"
+  ". b b b b b b ."
+	;
+	grid-row-gap: .5em;
+}
+
+.mobile-modal-body {
+background: rgb(195,185,34);
+background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
+padding-bottom: 2em;
+border-radius: 20px;
+margin: 10px;
+box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
+}
+
+.quote {
+  grid-area: a;
+  padding: 15%;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 8px DarkGrey;
+}
+
+.buttons {
+  grid-area: b;
+
+}
