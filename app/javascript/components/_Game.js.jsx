@@ -19,6 +19,7 @@ class Game extends Component {
 
     this.rightSwipe = this.rightSwipe.bind(this);
     this.leftSwipe = this.leftSwipe.bind(this);
+    this.countTracker = this.countTracker.bind(this);
   }
 
   rightSwipe(voted_party_id) {
@@ -28,6 +29,7 @@ class Game extends Component {
       let newQuestion = question;
       newQuestion = newQuestion + 1;
       console.log("done Right")
+      this.countTracker(newQuestion);
       return {scores: newScores, question: newQuestion};
     });
   }
@@ -37,15 +39,21 @@ class Game extends Component {
       let newQuestion = question;
       newQuestion = newQuestion + 1;
       console.log("done Left")
+      this.countTracker(newQuestion);
       return {scores: newScores, question: newQuestion};
     });
+  }
+  countTracker(num) {
+    if (num > 10) {
+      result(this.state.scores)
+    };
   }
 
   render() {
     console.log("this.state:", this.state);
     return (
       <div>
-        <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe}/>
+        <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} countTracker={this.countTracker}/>
         <ScoreCount count={this.state.scores} question={this.state.question}/>
       </div>
     )

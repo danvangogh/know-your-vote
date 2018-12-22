@@ -1,34 +1,9 @@
 import React, { Component } from 'react';
-import Quotes from "./_poli-quotes.js.jsx";
 import axios from 'axios';
 
-class Cards extends Component {
+class ResultsCard extends Component {
   constructor(props){
     super(props)
-  }
-  state = {
-    quotes: [],
-    currentQuote: {},
-  };
-
-  componentDidMount() {
-    axios.get(`/quotes/`)
-    .then((response) => {
-      console.log("data:", response.data);
-      this.setState({
-        quotes: response.data
-      }, () => {
-        console.log(this.state)
-      })
-    })
-    .catch(function (error) {
-      return error;
-    });
-  }
-
-  generateRandom = (min, max) => {
-    const x = Math.random() * (max - min) + min;
-    return Math.round(x)
   }
 
   render() {
