@@ -78,11 +78,14 @@ box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
   grid-area: a;
   padding: 15%;
   font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 8px DarkGrey;
 }
 
 .buttons {
   grid-area: b;
-  
+
 }
 
 .mobile-footer {

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-ro
 import NavBar from './_navbar.js';
 import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
+import Cards from './_Cards.js.jsx'
+import Game from './_Game.js.jsx'
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 
@@ -17,7 +19,6 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    console.log("componentDidMount");
     axios.get('/topics')
       .then((response) => {
         console.log("data:", response.data);
@@ -32,14 +33,14 @@ class Main extends Component {
   }
 
   render() {
-    console.log("this.state = ", this.state)
     return(
       <div>
         <Router>
           <div>
             <NavBar />
+            <Game />
             <Switch>
-              <Route path='/topics/:topic/:id' render={(routerProps) => 
+              <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
               <Route path='/' exact render={(routerProps) =>
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
