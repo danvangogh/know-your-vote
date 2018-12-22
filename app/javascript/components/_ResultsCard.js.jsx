@@ -30,10 +30,10 @@ class ResultsCard extends Component {
             <div className="matched-with">
               <div className=""></div>
               <div className=""></div>
-              <div className="party-result">GRN: 1</div>
-              <div className="party-result">NDP: 4</div>
-              <div className="party-result">LIB: 3</div>
-              <div className="party-result">CP: 2</div>
+              <div className="party-result">GRN: {this.props.count[5]}</div>
+              <div className="party-result">NDP: {this.props.count[6]}</div>
+              <div className="party-result">LIB: {this.props.count[7]}</div>
+              <div className="party-result">CP: {this.props.count[8]}</div>
               <div className=""></div>
               <div className=""></div>
             </div>

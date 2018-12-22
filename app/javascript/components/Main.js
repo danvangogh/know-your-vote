@@ -39,7 +39,7 @@ class Main extends Component {
         <Router>
           <div>
             <NavBar />
-            <ResultsCard />
+            <Game />
             <Switch>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
