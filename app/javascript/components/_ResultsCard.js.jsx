@@ -56,7 +56,7 @@ class ResultsCard extends Component {
             <div className="matched-with">
               <span className="leader-result quotearea">
                 <h5>{this.state.parties.Leadername}</h5>
-                <h6>{this.state.parties.Name}</h6>
+                <h6>{this.state.parties.name}</h6>
               </span>
             </div>
             <br />

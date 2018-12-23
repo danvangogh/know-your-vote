@@ -10,10 +10,10 @@ Quote.delete_all
 Party.delete_all
 
 parties = Party.create!([
-  {id: 1, name: 'GRN', Leadername: 'Elizabeth May', Image_Url: 'https://i.ibb.co/ZJvD6zD/Elizabeth-may.jpg'},
-  {id: 2, name: 'NDP', Leadername: 'Jagmeet Singh', Image_Url: 'https://i.ibb.co/x2RcFgb/Jagmeet-Singh-inline.jpg'},
-  {id: 3, name: 'LIB', Leadername: 'Justin Trudeau', Image_Url: 'https://i.ibb.co/fnv8fZt/justin-trudeau-prime-minister-canada.jpg'},
-  {id: 4, name: 'CP', Leadername: 'Andrew Scheer', Image_Url: 'https://i.ibb.co/bBFJx8m/andrew-scheer.jpg'}
+  {id: 1, name: 'Green Party', Leadername: 'Elizabeth May', Image_Url: 'https://i.ibb.co/ZJvD6zD/Elizabeth-may.jpg'},
+  {id: 2, name: 'New Democratic Party', Leadername: 'Jagmeet Singh', Image_Url: 'https://i.ibb.co/x2RcFgb/Jagmeet-Singh-inline.jpg'},
+  {id: 3, name: 'Liberal Party', Leadername: 'Justin Trudeau', Image_Url: 'https://i.ibb.co/fnv8fZt/justin-trudeau-prime-minister-canada.jpg'},
+  {id: 4, name: 'Conservative Party', Leadername: 'Andrew Scheer', Image_Url: 'https://i.ibb.co/bBFJx8m/andrew-scheer.jpg'}
   ])
 
 grn = parties[0].id
