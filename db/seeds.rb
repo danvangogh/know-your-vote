@@ -9,7 +9,12 @@ Topic.delete_all
 Quote.delete_all
 Party.delete_all
 
-parties = Party.create!([{name: 'GRN'}, {name: 'NDP'}, {name: 'LIB'}, {name: 'CP'}])
+parties = Party.create!([
+  {id: 1, name: 'GRN', Leadername: 'Elizabeth May', Image_Url: 'https://i.ibb.co/ZJvD6zD/Elizabeth-may.jpg'},
+  {id: 2, name: 'NDP', Leadername: 'Jagmeet Singh', Image_Url: 'https://i.ibb.co/x2RcFgb/Jagmeet-Singh-inline.jpg'},
+  {id: 3, name: 'LIB', Leadername: 'Justin Trudeau', Image_Url: 'https://i.ibb.co/fnv8fZt/justin-trudeau-prime-minister-canada.jpg'},
+  {id: 4, name: 'CP', Leadername: 'Andrew Scheer', Image_Url: 'https://i.ibb.co/bBFJx8m/andrew-scheer.jpg'}
+  ])
 
 grn = parties[0].id
 ndp = parties[1].id

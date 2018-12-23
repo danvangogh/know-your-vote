@@ -11,10 +11,10 @@ class Game extends Component {
     this.state = {
       question: 1,
       scores: {
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
       },
     }
 
@@ -49,13 +49,11 @@ class Game extends Component {
 
     if (isDonePlay >= 5) {
       card = <div>
-              <ResultsCard count={this.state.scores} />;
-              <ScoreCount count={this.state.scores} question={this.state.question}/>
+              <ResultsCard count={this.state.scores} />
             </div>
     } else {
       card = <div>
-              <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} />;
-              <ScoreCount count={this.state.scores} question={this.state.question}/>
+              <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} />
             </div>
     }
 

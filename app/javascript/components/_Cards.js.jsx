@@ -57,7 +57,6 @@ class Cards extends Component {
                 </button>
               </div>
             </div>
-
           </div>
         </section>
       </div>
