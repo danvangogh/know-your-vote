@@ -1,7 +1,8 @@
 .modal-body {
+  width: 400px;
   background: rgb(195,185,34);
   background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
-padding-bottom: 2em
+  padding-bottom: 2em
 }
 
 .quotearea {

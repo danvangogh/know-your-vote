@@ -43,11 +43,9 @@ class ResultsCard extends Component {
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
-            <div className="mobile-matched-with quotearea">
               <span className="announcement">
                 <h4>You Matched With...</h4>
               </span>
-            </div>
             <div className="matched-with">
               <span className="image">
                 <img className="match-photo image" src={this.state.parties.Image_Url} />

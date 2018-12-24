@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 import MediaQuery from 'react-responsive';
-import Quotes from "./_poli-quotes.js.jsx";
+import Game from "./_Game.js.jsx";
 
 
 class NavBar extends React.Component {
@@ -34,10 +34,7 @@ class NavBar extends React.Component {
         </div>
         <div>
           <Modal open={open} onClose={this.onCloseModal} center>
-            <h2>Find Your Match</h2>
-            <Quotes />
-            <button>Disagree</button>
-            <button>Agree</button>
+            <Game />
           </Modal>
         </div>
       </div>
