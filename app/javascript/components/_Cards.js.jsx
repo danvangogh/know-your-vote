@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hammer from 'react-hammerjs';
 import Quotes from "./_poli-quotes.js.jsx";
 
 class Cards extends Component {
