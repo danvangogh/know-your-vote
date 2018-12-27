@@ -5,6 +5,7 @@ import TopicPage from './_TopicPage.js.jsx'
 import TopicsPage from './_TopicsPage.js.jsx'
 import Cards from './_Cards.js.jsx'
 import Game from './_Game.js.jsx'
+import ResultsCard from './_ResultsCard.js.jsx'
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 
@@ -38,7 +39,6 @@ class Main extends Component {
         <Router>
           <div>
             <NavBar />
-            <Game />
             <Switch>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>

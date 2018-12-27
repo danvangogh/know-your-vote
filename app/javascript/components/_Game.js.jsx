@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cards from "./_Cards.js.jsx";
 import ScoreCount from './_ScoreCount.js.jsx'
+import ResultsCard from './_ResultsCard.js.jsx'
 import axios from 'axios';
 
 class Game extends Component {
@@ -10,16 +11,15 @@ class Game extends Component {
     this.state = {
       question: 1,
       scores: {
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
       },
     }
 
     this.rightSwipe = this.rightSwipe.bind(this);
     this.leftSwipe = this.leftSwipe.bind(this);
-    this.countTracker = this.countTracker.bind(this);
   }
 
   rightSwipe(voted_party_id) {
@@ -29,7 +29,6 @@ class Game extends Component {
       let newQuestion = question;
       newQuestion = newQuestion + 1;
       console.log("done Right")
-      this.countTracker(newQuestion);
       return {scores: newScores, question: newQuestion};
     });
   }
@@ -39,22 +38,30 @@ class Game extends Component {
       let newQuestion = question;
       newQuestion = newQuestion + 1;
       console.log("done Left")
-      this.countTracker(newQuestion);
       return {scores: newScores, question: newQuestion};
     });
   }
-  countTracker(num) {
-    if (num > 10) {
-      result(this.state.scores)
-    };
-  }
 
   render() {
+
+    const isDonePlay = this.state.question;
+    let card;
+
+    if (isDonePlay >= 5) {
+      card = <div>
+              <ResultsCard count={this.state.scores} />
+            </div>
+    } else {
+      card = <div>
+              <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} />
+            </div>
+    }
+
+
     console.log("this.state:", this.state);
     return (
       <div>
-        <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} countTracker={this.countTracker}/>
-        <ScoreCount count={this.state.scores} question={this.state.question}/>
+        {card}
       </div>
     )
   }

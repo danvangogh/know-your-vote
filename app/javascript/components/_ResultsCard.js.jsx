@@ -4,35 +4,70 @@ import axios from 'axios';
 class ResultsCard extends Component {
   constructor(props){
     super(props)
+      };
+    state = {
+      winner: null,
+      parties: []
   }
 
+  componentDidMount() {
+    let resultsNum = this.props.count;
+    console.log("resultsNum: ", resultsNum)
+    let myMatch = Object.keys(resultsNum).reduce((a, b) => resultsNum[a] > resultsNum[b] ? a : b);
+    console.log("myMatch: ", myMatch)
+    this.setState({
+      winner: myMatch
+    });
+    const id = myMatch;
+    console.log("IIIIIDDDDDD: ", id)
+    axios.get(`/parties/${id}`)
+    .then((response) => {
+      console.log("topics data:", response.data);
+      this.setState({ parties: response.data }, () => {
+        console.log("this.state.parties: ", this.state.parties)
+      }).bind(this)
+    })
+    .catch(function (error) {
+      return error;
+    });
+}
+
+
   render() {
-    if (this.state.quotes.length === 0) {
+
+    if (!this.state.parties) {
       return <p>Loading...</p>
     }
-
-    const qLength = this.state.quotes.length
-    const quoteIndex = this.generateRandom(0, qLength - 1)
-    const randomQuote = this.state.quotes[quoteIndex];
 
     return (
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
-            <div className="mobile-matched-with quotearea">
-              <h4 className="quote">{randomQuote.text}</h4>
-              <div className="buttons">
-                <button
-                  className="dissBtn"
-                  onClick={() => this.props.leftSwipe(randomQuote.party_id)}>Dislike
-                </button>
-                <button
-                  className="likeBtn"
-                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}>Like
-                </button>
-              </div>
+              <span className="announcement">
+                <h4>You Matched With...</h4>
+              </span>
+            <div className="matched-with">
+              <span className="image">
+                <img className="match-photo image" src={this.state.parties.Image_Url} />
+              </span>
             </div>
-
+            <div className="matched-with">
+              <span className="leader-result quotearea">
+                <h5>{this.state.parties.Leadername}</h5>
+                <h6>{this.state.parties.name}</h6>
+              </span>
+            </div>
+            <br />
+            <div className="matched-with">
+              <div className=""></div>
+              <div className=""></div>
+              <div className="party-result">GRN: {this.props.count[1]}</div>
+              <div className="party-result">NDP: {this.props.count[2]}</div>
+              <div className="party-result">LIB: {this.props.count[3]}</div>
+              <div className="party-result">CP: {this.props.count[4]}</div>
+              <div className=""></div>
+              <div className=""></div>
+            </div>
           </div>
         </section>
       </div>
@@ -40,4 +75,4 @@ class ResultsCard extends Component {
   }
 }
 
-export default Cards;
+export default ResultsCard;

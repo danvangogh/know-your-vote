@@ -14,9 +14,6 @@ class Quotes extends React.Component {
   render() {
     return (
       <div>
-        <p>
-          &ldquo;Hello, all of us pledging allegiance to the stars...&rdquo;
-        </p>
       </div>
     );
   }

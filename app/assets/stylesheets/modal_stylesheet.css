@@ -1,7 +1,8 @@
 .modal-body {
+  width: 400px;
   background: rgb(195,185,34);
   background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
-padding-bottom: 2em
+  padding-bottom: 2em
 }
 
 .quotearea {
@@ -26,7 +27,7 @@ padding-bottom: 2em
 } */
 
 .party-result {
-  color: tomato;
+  color: white;
   font-size: 12px;
   font-style: italic;
 }
@@ -34,4 +35,36 @@ padding-bottom: 2em
 .match-photo {
   border-radius: 20px;
   box-shadow: 0 0 .5pt 2.5pt white;
+}
+
+
+.matched-with {
+	display: grid;
+	grid-template-columns:repeat(8, 1fr);
+	justify-items: center;
+	grid-template-areas:
+	"a a a a a a a a"
+	". b b b b b b ."
+	". . c c c c . ."
+	". . d d d d . ."
+	;
+	grid-row-gap: .5em;
+}
+
+.announcement {
+  padding-top: 1em;
+	grid-area: a;
+	color: white;
+	font-style: italic;
+	text-align: center;
+}
+.image {
+	grid-area: b;
+	width: 100%;
+}
+.leader-result {
+	grid-area: c
+}
+.party-count {
+	grid-area: d;
 }

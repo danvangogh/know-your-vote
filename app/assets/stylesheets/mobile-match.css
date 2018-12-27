@@ -50,7 +50,8 @@
 }
 
 .results-card {
-  width: 100%;
+  width: 550px;
+  height: 550px;
   align-content: center;
 }
 
