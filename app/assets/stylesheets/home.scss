@@ -202,11 +202,16 @@ $main-font: 'Francois One', sans-serif;
 }
 
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width:768px) {
   .container {
     max-width: 570px;
+    padding: 0px;
   }
   p {
     font-size: 0.8em;
+  }
+
+  .blockquote {
+    font-size: 0.9em;
   }
 }
