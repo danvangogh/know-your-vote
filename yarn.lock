@@ -1065,7 +1065,7 @@ body-parser@1.18.3:
     debug "2.6.9"
     depd "~1.1.2"
     http-errors "~1.6.3"
-    iconv-lite "0.4.23"
+    v-lite "0.4.23"
     on-finished "~2.3.0"
     qs "6.5.2"
     raw-body "2.3.3"
@@ -1701,9 +1701,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cosmiconfig@^4.0.0:
+cosmfig@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-4.0.0.tgz#760391549580bbd2df1e562bc177b13c290972dc"
+  resolved "https://registry.yarnpkg.com/cosmfig/-/cosmfig-4.0.0.tgz#760391549580bbd2df1e562bc177b13c290972dc"
   integrity sha512-6e5vDdrXZD+t5v0L8CrurPeybg4Fmf+FCSYxXKYVAqLUtyCSbuyqE059d0kDthTNRzKVjL7QMgNpEUlsoYH3iQ==
   dependencies:
     is-directory "^0.3.1"
@@ -3070,16 +3070,16 @@ hyphenate-style-name@^1.0.0:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
   integrity sha1-MRYKNpMK2vH8BMYHT360FGXU7Es=
 
-iconv-lite@0.4.23:
+v-lite@0.4.23:
   version "0.4.23"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
+  resolved "https://registry.yarnpkg.com/v-lite/-/v-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
   integrity sha512-neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-iconv-lite@^0.4.4:
+v-lite@^0.4.4:
   version "0.4.24"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
+  resolved "https://registry.yarnpkg.com/v-lite/-/v-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
@@ -4144,7 +4144,7 @@ needle@^2.2.1:
   integrity sha512-HyoqEb4wr/rsoaIDfTH2aVL9nWtQqba2/HvMv+++m8u0dz808MaagKILxtfeSN7QU7nvbQ79zk3vYOJp9zsNEA==
   dependencies:
     debug "^2.1.2"
-    iconv-lite "^0.4.4"
+    v-lite "^0.4.4"
     sax "^1.2.4"
 
 negotiator@0.6.1:
@@ -4997,7 +4997,7 @@ postcss-load-config@^2.0.0:
   resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-2.0.0.tgz#f1312ddbf5912cd747177083c5ef7a19d62ee484"
   integrity sha512-V5JBLzw406BB8UIfsAWSK2KSwIJ5yoEIVFb4gVkXci0QdKgA24jLmHZ/ghe/GgX0lJ0/D1uUK1ejhzEY94MChQ==
   dependencies:
-    cosmiconfig "^4.0.0"
+    cosmfig "^4.0.0"
     import-cwd "^2.0.0"
 
 postcss-loader@^2.1.5:
@@ -5469,7 +5469,7 @@ raw-body@2.3.3:
   dependencies:
     bytes "3.0.0"
     http-errors "1.6.3"
-    iconv-lite "0.4.23"
+    v-lite "0.4.23"
     unpipe "1.0.0"
 
 rc@^1.2.7:

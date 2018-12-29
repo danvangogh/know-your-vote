@@ -57,6 +57,10 @@ class Main extends Component {
                 <div className="heart-icon">
                   <i className="far fa-heart"></i>
                 </div>
+                <p className="split2">|</p>
+                <div className="admin-icon">
+                  <i className="fas fa-lock"></i>
+                </div>
               </footer>
             </MediaQuery>
           </div>

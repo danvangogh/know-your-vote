@@ -11,15 +11,10 @@
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(7 1fr);
+    grid-template-columns: repeat(8 1fr);
     grid-template-areas:
-    ". a . . c . . b ."
+    ". a . d . b . e . c ."
     ;
-}
-
-.heart-icon {
-  grid-area: b;
-  font-size: 1em;
 }
 
 .home-icon {
@@ -27,12 +22,26 @@
   font-size: 1em;
 }
 
-.fa-home {
-  color: darkslategrey;
+.heart-icon {
+  grid-area: b;
+  font-size: 1em;
+}
+
+.admin-icon {
+  grid-area: c;
+  font-size: 1em;
+}
+
+.fa-home, .fa-lock {
+  color: rgb(58, 56, 56);
 }
 
 .split {
-  grid-area: c;
+  grid-area: d;
+}
+
+.split2 {
+  grid-area: e;
 }
 
 /* <section class="mobile-quote-area">
