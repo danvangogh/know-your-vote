@@ -10,4 +10,14 @@ class QuotesController < ApplicationController
     render json: @quote
   end
 
+  def new
+  end
+
+  def create
+    @quote = Quote.new(params[:quote])
+    
+    @quote.save
+    redirect_to '/'
+  end
+
 end

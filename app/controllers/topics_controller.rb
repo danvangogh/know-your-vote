@@ -10,4 +10,10 @@ class TopicsController < ApplicationController
     render json: @topics
   end
 
+  def create
+    @topics = Topic.new(params[:topic])
+
+    @topic.save
+  end
+
 end
