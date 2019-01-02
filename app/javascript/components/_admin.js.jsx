@@ -7,29 +7,30 @@ class Admin extends Component {
   }
   state = {
     topics: [],
-    tweets: null,
+    parties:[]
   }
 
   componentDidMount() {
-    axios.get('/topics')
-      .then((response) => {
-        console.log("data:", response.data);
-        this.setState({
-          topics: response.data
-        }, () => {
-          console.log(this.state)
-        })
+    axios.all([
+      axios.get('/topics'),
+      axios.get('/parties')
+    ])
+    .then(axios.spread((topicsRes, partiesRes) => {
+      this.setState({
+        topics: topicsRes.data,
+        parties: partiesRes.data
       })
-      .catch(function (error) {
-        return error;
-      });
+    }))
+    .catch(function (error) {
+      return error;
+    })
   }
 
   render() {
     return (
       <div>
         <form>
-          <h4 className="add-topic">Add a Topic</h4>
+          <h4 className="admin add-topic">Add a Topic</h4>
           <div className="form-group">
             <label for="topic-name">Name</label>
             <input type="text" className="form-control"></input>
@@ -53,7 +54,25 @@ class Admin extends Component {
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         <form>
-          <h4 className="delete-topic">Delete a Topic</h4>
+          <h4 className="admin add-topic">Add a Quote</h4>
+          <div className="form-group">
+            <label for="topic-description">Quote</label>
+            <textarea className="form-control" rows="3"></textarea>
+          </div>
+          <div className="form-group">
+            <label for="exampleFormControlSelect1">Select Parties from the following</label>
+            <select className="form-control" id="exampleFormControlSelect1">
+              { this.state.parties.map((party) => {
+                return (
+                  <option>{party.name}</option>
+                );
+              })}
+            </select>  
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+        <form>
+          <h4 className="admin delete-topic">Delete a Topic</h4>
           <div className="form-group">
             <label for="exampleFormControlSelect1">Select from the following</label>
             <select className="form-control" id="exampleFormControlSelect1">
@@ -73,18 +92,3 @@ class Admin extends Component {
 }
 
 export default Admin;
-
-
-/* 
-
-{ topics.map((topic) => {
-  return (
-    <div className="col-4 span_1_of_3 hometopics" key={topic.id}>
-      <Link to={`/topics/${topic.name}/${topic.id}`} className="title" params={{ id: topic.id }}>
-        <span className="topic">{topic.name}</span>
-        <img src={topic.photo_url} alt={topic.name} className="img-responsive" />
-      </Link>
-    </div>
-  );
-})}
-*/

@@ -230,10 +230,14 @@ $main-font: 'Francois One', sans-serif;
 /*  ================ ADMIN PAGE ================ */
 
 form {
-  padding: 6em;
+  padding: 2em 6em;
 }
 
-.add-topic, .delete-topic {
+.admin {
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   padding-bottom: 0.5em;
+}
+
+select#exampleFormControlSelect1 {
+  width: 60%;
 }
