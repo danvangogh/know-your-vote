@@ -10,14 +10,17 @@ class QuotesController < ApplicationController
     render json: @quote
   end
 
-  def new
+  def create
+    @quote = Quote.new(quote_params)
+
+    @quote.save
+    render json: @quote
   end
 
-  def create
-    @quote = Quote.new(params[:quote])
-    
-    @quote.save
-    redirect_to '/'
+private
+
+  def quote_params
+    params.require(:quote).permit(:text, :party_id)
   end
 
 end
