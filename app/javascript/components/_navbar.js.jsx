@@ -29,8 +29,8 @@ class NavBar extends React.Component {
           <MediaQuery minWidth={576}>
             <button type="button" className="button" onClick={this.onOpenModal}>Find my Poli-match</button>
             <span>
-              <button type="button" className="button">
-                <Link to="/admin">Admin</Link>
+              <button type="button" >
+                <Link to="/admin" className="button">Admin</Link>
               </button>
             </span>
           </MediaQuery>
