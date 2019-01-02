@@ -41,12 +41,6 @@ $main-font: 'Francois One', sans-serif;
   margin: 0.2em 0em;
 }
 
-.navbar {
-  width: 100%;
-  text-align: center;
-  height: 60px;
-  display: inline-table;
-}
 
 .name {
   font-size: 2.2em;
@@ -102,6 +96,21 @@ $main-font: 'Francois One', sans-serif;
   text-align: center;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+/*  ================ NAVBAR ================ */
+.navbar {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  display: inline-table;
+}
+
+.button {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /*  ================ GROUPING ================ */
