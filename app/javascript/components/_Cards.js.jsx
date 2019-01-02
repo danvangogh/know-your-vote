@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Quotes from "./_poli-quotes.js.jsx";
 import axios from 'axios';
+import Quotes from "./_poli-quotes.js.jsx";
 
 class Cards extends Component {
   constructor(props){
@@ -25,7 +25,7 @@ class Cards extends Component {
       return error;
     });
   }
-
+  
   generateRandom = (min, max) => {
     const x = Math.random() * (max - min) + min;
     return Math.round(x)
@@ -39,7 +39,6 @@ class Cards extends Component {
     const qLength = this.state.quotes.length
     const quoteIndex = this.generateRandom(0, qLength - 1)
     const randomQuote = this.state.quotes[quoteIndex];
-
     return (
       <div>
         <section className="results-card">

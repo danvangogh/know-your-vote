@@ -8,6 +8,7 @@ import Game from './_Game.js.jsx'
 import ResultsCard from './_ResultsCard.js.jsx'
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
+import Admin from './_admin.js.jsx';
 
 class Main extends Component {
   constructor(props){
@@ -40,6 +41,7 @@ class Main extends Component {
           <div>
             <NavBar />
             <Switch>
+              <Route path="/admin" component={Admin}/>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
               <Route path='/' exact render={(routerProps) =>

@@ -19,7 +19,8 @@ $main-font: 'Francois One', sans-serif;
   }
 }
 
-/*  COLUMN SETUP  */
+/*  ================ COLUMN SETUP ================ */
+
 .col {
   display: block;
   float: left;
@@ -40,12 +41,6 @@ $main-font: 'Francois One', sans-serif;
   margin: 0.2em 0em;
 }
 
-.navbar {
-  width: 100%;
-  text-align: center;
-  height: 60px;
-  display: inline-table;
-}
 
 .name {
   font-size: 2.2em;
@@ -103,7 +98,23 @@ $main-font: 'Francois One', sans-serif;
   padding-bottom: 2em;
 }
 
-/*  GROUPING  */
+/*  ================ NAVBAR ================ */
+.navbar {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  display: inline-table;
+}
+
+.button {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/*  ================ GROUPING ================ */
+
 .group:before,
 .group:after {
   content: "";
@@ -113,7 +124,7 @@ $main-font: 'Francois One', sans-serif;
   clear: both;
 }
 
-/*  GRID OF THREE   ============================================================================= */
+/*  ================ GRID OF THREE ================ */
 
 .span_3_of_3 {
   width: 100%;
@@ -127,14 +138,13 @@ $main-font: 'Francois One', sans-serif;
   width: 32.26%;
 }
 
-/*  GO FULL WIDTH AT LESS THAN 575 PIXELS */
+/*  ================ GO FULL WIDTH AT LESS THAN 575 PIXELS ================ */
 
 @media only screen and (max-width: 575px) {
   .span_3_of_3, .span_2_of_3, .span_1_of_3 {
     width: 100%;
   }
 }
-
 
 .party-results {
   display: grid;
@@ -155,7 +165,7 @@ $main-font: 'Francois One', sans-serif;
   justify-self: center;
 }
 
-/*  TABS */
+/*  ================ TABS ================ */
 
 .tabs {
   border: 1px solid rgb(236, 236, 236);
@@ -202,11 +212,28 @@ $main-font: 'Francois One', sans-serif;
 }
 
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width:768px) {
   .container {
     max-width: 570px;
+    padding: 0px;
   }
   p {
     font-size: 0.8em;
   }
+
+  .blockquote {
+    font-size: 0.9em;
+  }
+}
+
+
+/*  ================ ADMIN PAGE ================ */
+
+form {
+  padding: 6em;
+}
+
+.add-topic {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.5em;
 }

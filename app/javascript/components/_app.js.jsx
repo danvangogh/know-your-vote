@@ -20,19 +20,19 @@ class App extends React.Component {
     this.setState({ open: false });
   };
 
-componentDidMount() {
-  axios.get('/topics')
-    .then((response) => {
-      console.log("data:", response.data);
-      this.setState({
-        topics: response.data
-      }, () => {
-        console.log(this.state)
+  componentDidMount() {
+    axios.get('/topics')
+      .then((response) => {
+        console.log("data:", response.data);
+        this.setState({
+          topics: response.data
+        }, () => {
+          console.log(this.state)
+        })
       })
-    })
-    .catch(function (error) {
-      return error;
-    });
+      .catch(function (error) {
+        return error;
+      });
   }
 
   topicSet = () => {
