@@ -26,6 +26,22 @@ class Admin extends Component {
     })
   }
 
+  axios.post('/topics', {
+      name: 'Fred',
+      description: 'Flintstone',
+      good: '',
+      bad: '',
+      photo_url: '',
+      twitter_url: ''
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+
   render() {
     return (
       <div>
@@ -71,7 +87,7 @@ class Admin extends Component {
                   <option>{party.name}</option>
                 );
               })}
-            </select>  
+            </select>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
@@ -85,7 +101,7 @@ class Admin extends Component {
                   <option>{topic.name}</option>
                 );
               })}
-            </select>  
+            </select>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
