@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 
-import Quotes from "./_poli-quotes.js.jsx";
 import axios from 'axios';
 
 class App extends React.Component {
@@ -45,14 +44,6 @@ class App extends React.Component {
       <div className="App">
         <div>
           <button type="button" onClick={this.onOpenModal}>Find my Poli-match</button>
-        </div>
-        <div>
-          <Modal open={open} onClose={this.onCloseModal} center>
-            <h2>Find Your Match</h2>
-            <Quotes />
-            <button>Disagree</button>
-            <button>Agree</button>
-          </Modal>
         </div>
         <Route exact={true} path="/" render={() => (
           <div>
