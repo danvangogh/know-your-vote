@@ -1,5 +1,7 @@
 class Admin::QuotesController < ApplicationController
 
+  http_basic_authenticate_with name: "admin", password: "asdf"
+
   def create
     @quote = Quote.new(quote_params)
 
@@ -7,7 +9,7 @@ class Admin::QuotesController < ApplicationController
     render json: @quote
   end
 
-private
+  private
 
   def quote_params
     params.require(:quote).permit(:text, :party_id)

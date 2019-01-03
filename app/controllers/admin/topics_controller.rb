@@ -1,6 +1,6 @@
 class Admin::TopicsController < ApplicationController
 
-  http_basic_authenticate_with name: ENV['ENV_USERNAME'], password: ENV['ENV_PASSWORD']
+  http_basic_authenticate_with name: "admin", password: "asdf"
 
   def create
     @topic = Topic.new(topic_params)
