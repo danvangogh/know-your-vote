@@ -1,6 +1,6 @@
 class Admin::TopicsController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "asdf"
+  http_basic_authenticate_with name: ENV['ENV_USERNAME'], password: ENV['ENV_PASSWORD']
 
   def create
     @topic = Topic.new(topic_params)
@@ -12,7 +12,7 @@ class Admin::TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:name, :description, :good, :bad)
+    params.require(:topic).permit(:name, :description, :good, :bad, :photo_url, :twitter_url)
   end
 
 end

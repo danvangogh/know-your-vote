@@ -1,6 +1,6 @@
 class Admin::QuotesController < ApplicationController
 
-  http_basic_authenticate_with name: "admin", password: "asdf"
+  http_basic_authenticate_with name: ENV['ENV_USERNAME'], password: ENV['ENV_PASSWORD']
 
   def create
     @quote = Quote.new(quote_params)

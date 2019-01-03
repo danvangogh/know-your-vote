@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :parties, only: [:show, :index]
 
   namespace :admin do
+    root to: "dashboard#show"
     resources :topics, only: [:show, :index, :create, :update, :destroy]
     resources :quotes, only: [:show, :index, :create, :update, :destroy]
   end
