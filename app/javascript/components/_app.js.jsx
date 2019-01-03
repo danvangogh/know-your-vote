@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import Modal from 'react-responsive-modal';
-
 import axios from 'axios';
 
 class App extends React.Component {
