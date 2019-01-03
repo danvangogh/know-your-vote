@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Tabs from './Tabs';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 class TopicPage extends Component {
   constructor(props){
@@ -48,32 +49,13 @@ class TopicPage extends Component {
               </div>
               <div label="OPINIONS">
                 <div className="card">
-                  <div className="card-header">
-                    Quote
-                  </div>
-                  <div className="card-body">
-                    <blockquote className="blockquote mb-0">
-                      <p>And I&apos;ve found that no matter where I am, or who I&apos;m talking to, there&apos;s a common theme that emerges. I&apos;ll recruit an army of new teachers, and pay them higher salaries and give them more support. </p>
-                      <footer className="blockquote-footer">
-                        Obama
-                        <cite title="Source Title"> CBC News</cite>
-                      </footer>
-                    </blockquote>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header">
-                    Quote
-                  </div>
-                  <div className="card-body">
-                    <blockquote className="blockquote mb-0">
-                      <p>Together, you represent the harmony between tradition and progress. Violent extremists have exploited these tensions in a small but potent minority of Muslims. That is the responsibility we have to one another as human beings. Given our interdependence, any world order that elevates one nation or group of people over another will inevitably fail.</p>
-                      <footer className="blockquote-footer">
-                        Trudeau
-                        <cite title="Source Title"> Twitter</cite>
-                      </footer>
-                    </blockquote>
-                  </div>
+                  <blockquote className="blockquote mb-0">
+                    <div className="centerContent">
+                      <div className="selfCenter standardWidth">
+                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
+                      </div>
+                    </div>
+                  </blockquote>
                 </div>
               </div>
             </Tabs>
@@ -96,32 +78,13 @@ class TopicPage extends Component {
               <div className="col-4">
                 <h3>OPINIONS</h3>
                 <div className="card">
-                  <div className="card-header">
-                    Quote
-                  </div>
-                  <div className="card-body">
-                    <blockquote className="blockquote mb-0">
-                      <p>And I&apos;ve found that no matter where I am, or who I&apos;m talking to, there&apos;s a common theme that emerges. I&apos;ll recruit an army of new teachers, and pay them higher salaries and give them more support. </p>
-                      <footer className="blockquote-footer">
-                        Obama
-                        <cite title="Source Title"> CBC News</cite>
-                      </footer>
-                    </blockquote>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header">
-                    Quote
-                  </div>
-                  <div className="card-body">
-                    <blockquote className="blockquote mb-0">
-                      <p>Together, you represent the harmony between tradition and progress. Violent extremists have exploited these tensions in a small but potent minority of Muslims. That is the responsibility we have to one another as human beings. Given our interdependence, any world order that elevates one nation or group of people over another will inevitably fail.</p>
-                      <footer className="blockquote-footer">
-                        Trudeau
-                        <cite title="Source Title"> Twitter</cite>
-                      </footer>
-                    </blockquote>
-                  </div>
+                  <blockquote className="blockquote mb-0">
+                    <div className="centerContent">
+                      <div className="selfCenter standardWidth">
+                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" />
+                      </div>
+                    </div>
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -133,3 +96,4 @@ class TopicPage extends Component {
 }
 
 export default TopicPage;
+
