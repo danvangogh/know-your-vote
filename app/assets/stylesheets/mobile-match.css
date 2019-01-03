@@ -60,7 +60,7 @@
 	grid-template-columns:repeat(8, 1fr);
 	justify-items: center;
 	grid-template-areas:
-	"a a a a a a a a"
+	"start a a a a a a end"
   ". b b b b b b ."
 	;
 	grid-row-gap: .5em;
@@ -81,7 +81,24 @@ box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
   font-size: 18px;
   color: #ffffff;
   text-align: center;
+  font-style: italic;
   text-shadow: 1px 1px 8px DarkGrey;
+}
+
+.quotation-left {
+  grid-area: start;
+  color: white;
+  font-size: 2em;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.quotation-right {
+  grid-area: end;
+  color: white;
+  font-size: 2em;
+  margin-right: 1em;
+  align-self: end;
 }
 
 .buttons {

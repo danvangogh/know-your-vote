@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $main-font: 'Francois One', sans-serif;
+$dark-grey: rgba(0, 0, 0, 0.4);
 
 .section {
   clear: both;
@@ -11,7 +12,7 @@ $main-font: 'Francois One', sans-serif;
 }
 
 .current-topics {
-  border-top: 2px solid rgba(0,0,0,0.4);
+  border-top: 2px solid $dark-grey;
   margin: 1em;
   .all-topics {
     text-align: center;
@@ -230,10 +231,28 @@ $main-font: 'Francois One', sans-serif;
 /*  ================ ADMIN PAGE ================ */
 
 form {
-  padding: 6em;
+  padding: 2em 6em;
 }
 
-.add-topic {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+.admin {
+  border-bottom: 2px solid $dark-grey;
   padding-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 575px) {
+  select#exampleFormControlSelect1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  select#exampleFormControlSelect1 {
+    width: 60%;
+  }
+}
+
+button.btn.btn-primary {
+  background-color: $dark-grey;
+  border-color: $dark-grey;
+  border-radius: 4px;
 }
