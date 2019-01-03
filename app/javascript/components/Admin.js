@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import NavBar from './_navbar.js';
-import TopicPage from './_TopicPage.js.jsx'
-import TopicsPage from './_TopicsPage.js.jsx'
-import Cards from './_Cards.js.jsx'
-import Game from './_Game.js.jsx'
-import ResultsCard from './_ResultsCard.js.jsx'
 import axios from 'axios';
-import MediaQuery from 'react-responsive';
 
 
 import TopicForm from './_AdminTopicForm.js.jsx'
@@ -30,7 +24,7 @@ class Admin extends Component {
       axios.get('/parties'),
       axios.get('/quotes')
     ])
-    .then(axios.spread((topicsRes, partiesRes) => {
+    .then(axios.spread((topicsRes, partiesRes, quotesRes) => {
       this.setState({
         topics: topicsRes.data,
         parties: partiesRes.data,
