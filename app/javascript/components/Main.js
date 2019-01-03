@@ -42,6 +42,7 @@ class Main extends Component {
             <NavBar />
             <Switch>
               <Route path="/admin" component={Admin}/>
+              <Route path="/game" component={Game}/>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
               <Route path='/' exact render={(routerProps) =>
@@ -49,6 +50,9 @@ class Main extends Component {
               <Route path='/' render={() => <Redirect to='/'/>}/>
             </Switch>
             <MediaQuery maxWidth={575}>
+              <div className="admin-div">
+                <Link to="/admin" className="admin-link">Admin</Link>
+              </div>
               <footer className="mobile-footer">
                 <div className="home-icon">
                   <Link to="/">
@@ -57,7 +61,9 @@ class Main extends Component {
                 </div>
                 <p className="split">|</p>
                 <div className="heart-icon">
-                  <i className="far fa-heart"></i>
+                  <Link to="/game">
+                    <i className="far fa-heart"></i>
+                  </Link>
                 </div>
               </footer>
             </MediaQuery>

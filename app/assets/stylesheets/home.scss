@@ -256,3 +256,25 @@ button.btn.btn-primary {
   border-color: $dark-grey;
   border-radius: 4px;
 }
+
+/*  ================ MOBILE PAGE ================ */
+
+.admin-link {
+  color: black;
+  border-top: 1px solid black;
+  padding: 0.5em;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.admin-div {
+  text-align: center;
+}
+
+.fa-home, .fa-heart {
+  color: rgb(58, 56, 56);
+  &:hover {
+    color: orange;
+  }
+}
