@@ -57,7 +57,7 @@ class App extends React.Component {
         <Route exact={true} path="/" render={() => (
           <div>
             <h2>Current Topics</h2>
-            {   this.state.topics.map((topic, index) => {
+            { this.state.topics.map((topic, index) => {
                 return(
                   <div className="col span_1_of_3 hometopics" key={topic.id}>
                     <Link to={`/topics/${topic.name}`} className="title">
