@@ -21,11 +21,6 @@
   font-weight: 500;
 }
 
-/* .modal-header {
-  background-color: #fff9fb;
-  color: #4b88a2
-} */
-
 .party-result {
   color: white;
   font-size: 12px;
@@ -52,15 +47,15 @@
 }
 
 .announcement {
-  padding-top: 1em;
 	grid-area: a;
 	color: white;
 	font-style: italic;
-	text-align: center;
+  text-align: center;
+  padding-top: 1em;
 }
 .image {
 	grid-area: b;
-	width: 100%;
+	width: 20em;
 }
 .leader-result {
 	grid-area: c

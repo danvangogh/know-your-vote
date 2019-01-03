@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Cards from "./_Cards.js.jsx";
-import ScoreCount from './_ScoreCount.js.jsx'
 import ResultsCard from './_ResultsCard.js.jsx'
 import axios from 'axios';
 

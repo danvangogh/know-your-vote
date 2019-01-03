@@ -19,7 +19,6 @@ class ResultsCard extends Component {
       winner: myMatch
     });
     const id = myMatch;
-    console.log("IIIIIDDDDDD: ", id)
     axios.get(`/parties/${id}`)
     .then((response) => {
       console.log("topics data:", response.data);
@@ -43,9 +42,9 @@ class ResultsCard extends Component {
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
-              <span className="announcement">
+              <div className="announcement">
                 <h4>You Matched With...</h4>
-              </span>
+              </div>
             <div className="matched-with">
               <span className="image">
                 <img className="match-photo image" src={this.state.parties.Image_Url} />

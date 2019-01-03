@@ -1,0 +1,132 @@
+/*  ================ MOBILE FOOTER ================ */
+.mobile-footer {
+  background-color: #F8F8F8;
+  border-top: 1px solid #E7E7E7;
+  text-align:center;
+  padding:20px;
+
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(7 1fr);
+  grid-template-areas:
+  ". a . . c . . b ."
+  ;
+}
+
+.heart-icon {
+  grid-area: b;
+  font-size: 1em;
+}
+
+.home-icon {
+  grid-area: a;
+  font-size: 1em;
+}
+
+
+.split {
+  grid-area: c;
+}
+
+.fa-home, .fa-heart {
+  color: rgb(58, 56, 56);
+  &:hover {
+    color: orange;
+  }
+}
+
+/*  ================ MODAL ================ */
+
+.mobile-quote-area {
+  width: 100%;
+  height: 100%
+}
+
+.mobile-quote-body {
+  width: 100%;
+  background-color: tomato;
+}
+
+.results-card {
+  width: 550px;
+  height: 550px;
+  align-content: center;
+}
+
+.mobile-matched-with {
+	display: grid;
+	grid-template-columns:repeat(8, 1fr);
+	justify-items: center;
+	grid-template-areas:
+	"start a a a a a a end"
+  ". b b b b b b ."
+	;
+  grid-row-gap: .5em;
+  grid-template-rows: 24em 8em;
+}
+
+.mobile-modal-body {
+  background: rgb(195,185,34);
+  background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
+  padding-bottom: 2em;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
+  max-height: 530px;
+  min-height: 530px;
+}
+
+.quote {
+  grid-area: a;
+  padding: 15%;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  align-self: center;
+  font-style: italic;
+  text-shadow: 1px 1px 8px DarkGrey;
+}
+
+.quotation-left, .quotation-right {
+  color: white;
+  font-size: 2em;
+  opacity: 0.6;
+}
+
+.quotation-left {
+  grid-area: start;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.quotation-right {
+  grid-area: end;
+  margin-right: 1em;
+  align-self: end;
+}
+
+.buttons {
+  grid-area: b;
+  padding-top: 0.5em;
+}
+
+.likeBtn, .dissBtn {
+  height: 90px;
+  width: 90px;
+  padding: 25px;
+  margin: 0 6px;
+  box-shadow: 0px 0px 0px 10px rgba(240,240,240,1);
+  background-size: auto 50px;
+}
+
+.styles_modal__gNwvD {
+  position: relative;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  margin: auto;
+}
