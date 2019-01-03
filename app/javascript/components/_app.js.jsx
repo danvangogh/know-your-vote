@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import Modal from 'react-responsive-modal';
 
-import Quotes from "./_poli-quotes.js.jsx";
 import axios from 'axios';
 
 class App extends React.Component {
