@@ -33,23 +33,27 @@ class Admin extends Component {
           <h4 className="admin add-topic">Add a Topic</h4>
           <div className="form-group">
             <label for="topic-name">Name</label>
-            <input type="text" className="form-control"></input>
+            <input type="text" className="form-control"/>
           </div>
           <div className="form-group">
             <label for="topic-description">Description</label>
-            <textarea className="form-control" rows="3"></textarea>
+            <textarea className="form-control" rows="3"/>
           </div>
           <div className="form-group">
             <label for="topic-description">Good</label>
-            <textarea className="form-control" rows="3"></textarea>
+            <textarea className="form-control" rows="3"/>
           </div>
           <div className="form-group">
             <label for="topic-description">Bad</label>
-            <textarea className="form-control" rows="3"></textarea>
+            <textarea className="form-control" rows="3"/>
+          </div>
+          <div className="form-group">
+            <label for="topic-name">Add Topic Image URL</label>
+            <input type="text" className="form-control"/>
           </div>
           <div className="form-group">
             <label for="topic-name">Twitter collection URL</label>
-            <input type="text" className="form-control"></input>
+            <input type="text" className="form-control"/>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
@@ -57,7 +61,7 @@ class Admin extends Component {
           <h4 className="admin add-topic">Add a Quote</h4>
           <div className="form-group">
             <label for="topic-description">Quote</label>
-            <textarea className="form-control" rows="3"></textarea>
+            <textarea className="form-control" rows="3"/>
           </div>
           <div className="form-group">
             <label for="exampleFormControlSelect1">Select Parties from the following</label>
