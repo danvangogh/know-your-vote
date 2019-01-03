@@ -44,7 +44,9 @@ class Cards extends Component {
         <section className="results-card">
           <div className="mobile-modal-body">
             <div className="mobile-matched-with quotearea">
+              <i class="fas fa-quote-left quotation-left"></i>
               <h4 className="quote">{randomQuote.text}</h4>
+              <i class="fas fa-quote-right quotation-right"></i>
               <div className="buttons">
                 <button
                   className="dissBtn"
