@@ -6,7 +6,7 @@ class DeleteTopic extends Component {
     super(props)
     this.state = {
       topicToDelete: {
-        id: 0,
+        id: 1,
         name: '',
       },
     }
@@ -39,7 +39,7 @@ class DeleteTopic extends Component {
           <select
             className="form-control"
             id="exampleFormControlSelect1"
-            value={this.state.topicToDelete}
+            value={this.state.topicToDelete.name}
             onChange={this.handleChange}>
             { this.props.topics.map((topic) => {
                           return (
