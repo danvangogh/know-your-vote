@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Swipe from './_swipe.js'
+import Swipeable from "react-swipy";
 
 class Cards extends Component {
   constructor(props){
@@ -45,7 +45,28 @@ class Cards extends Component {
     const randomQuote = this.state.quotes[quoteIndex];
     return (
       <div>
-        <Swipe quotes={this.quotesText(this.state.quotes)} />
+        <Swipeable 
+          buttons={({ right, left }) => (
+            <div className="buttons">
+              <button className="dissBtn"
+                onClick={() => {this.props.leftSwipe(randomQuote.party_id); left();}}>Dislike
+              </button>
+              <button className="likeBtn"
+                onClick={() => {this.props.rightSwipe(randomQuote.party_id); right();}}>Like
+              </button>
+            </div>
+          )}
+        >
+        <section className="results-card">
+          <div className="mobile-modal-body">
+            <div className="mobile-matched-with quotearea">
+              <i className="fas fa-quote-left quotation-left"></i>
+              <h4 className="quote">{randomQuote.text}</h4>
+              <i className="fas fa-quote-right quotation-right"></i>
+            </div>
+          </div>
+        </section>
+        </Swipeable>
       </div>
     )
   }

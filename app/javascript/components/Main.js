@@ -7,7 +7,7 @@ import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
-import Swipe from './_swipe.js.jsx';
+
 
 class Main extends Component {
   constructor(props){

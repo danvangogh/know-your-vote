@@ -43,9 +43,9 @@ class Swipe extends Component {
                     <button onClick={left}>Reject</button>
                     <button onClick={right}>Accept</button>
                   </div>
-                )}
-                onAfterSwipe={this.remove}
-              >
+                  )}
+                  onAfterSwipe={this.remove}
+                >
                 <Card>{quotes[0]}</Card>
               </Swipeable>
               {quotes.length > 1 && <Card zIndex={-1}>{quotes[1]}</Card>}
