@@ -17,12 +17,12 @@ class Cards extends Component {
       this.setState({
         quotes: response.data
       })
-      console.log("response.data: ", response.data)
     })
     .catch(function (error) {
       return error;
     });
   }
+  
   quotesText = arr => {
     const textArr = [];
     arr.forEach(function(quote) {
@@ -40,13 +40,12 @@ class Cards extends Component {
     if (this.state.quotes.length === 0) {
       return <p>Loading...</p>
     }
-
     const qLength = this.state.quotes.length
     const quoteIndex = this.generateRandom(0, qLength - 1)
     const randomQuote = this.state.quotes[quoteIndex];
     return (
       <div>
-        <Swipe quotes={this.quotesText} />
+        <Swipe quotes={this.quotesText(this.state.quotes)} />
       </div>
     )
   }

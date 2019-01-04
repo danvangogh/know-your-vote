@@ -26,10 +26,9 @@ class Swipe extends Component {
   }
 
   remove = () =>
-    quotes.slice(1, quotes.length);
+    this.props.quotes.slice(1, this.props.quotes.length);
 
   render() {
-    console.log("this.props", this.props)
     const quotes = this.props.quotes;
     console.log("quotes ", quotes)
 
@@ -52,7 +51,6 @@ class Swipe extends Component {
               {quotes.length > 1 && <Card zIndex={-1}>{quotes[1]}</Card>}
             </div>
           )}
-          {quotes.length <= 1 && <Card zIndex={-2}>No more quotes</Card>}
         </div>
       </div>
     );
