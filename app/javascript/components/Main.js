@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import NavBar from './_navbar.js';
-import TopicPage from './_TopicPage.js.jsx'
-import TopicsPage from './_TopicsPage.js.jsx'
-import Cards from './_Cards.js.jsx'
-import Game from './_Game.js.jsx'
-import ResultsCard from './_ResultsCard.js.jsx'
+import TopicPage from './_TopicPage.js.jsx';
+import TopicsPage from './_TopicsPage.js.jsx';
+import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './_admin.js.jsx';
@@ -49,10 +47,10 @@ class Main extends Component {
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
               <Route path='/' render={() => <Redirect to='/'/>}/>
             </Switch>
+            <div className="admin-div">
+              <Link to="/admin" className="admin-link">Admin</Link>
+            </div>
             <MediaQuery maxWidth={575}>
-              <div className="admin-div">
-                <Link to="/admin" className="admin-link">Admin</Link>
-              </div>
               <footer className="mobile-footer">
                 <div className="home-icon">
                   <Link to="/">

@@ -36,7 +36,7 @@ class TopicPage extends Component {
       <div>
         <MediaQuery maxWidth={575}>
           <div>
-            <h2>{name}</h2>
+            <h2 className="heading">{name}</h2>
             <Tabs>
               <div label="FACT">
                 <br />
@@ -52,7 +52,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
+                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" autoHeight/>
                       </div>
                     </div>
                   </blockquote>
@@ -63,7 +63,7 @@ class TopicPage extends Component {
         </MediaQuery>
         <MediaQuery minWidth={576}>
           <div className="container">
-            <h2>{name}</h2>
+            <h2 className="heading">{name}</h2>
             <div className="row">
               <div className="col-8">
                 <h3>FACT</h3>

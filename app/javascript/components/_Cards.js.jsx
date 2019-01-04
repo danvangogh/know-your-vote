@@ -13,11 +13,8 @@ class Cards extends Component {
   componentDidMount() {
     axios.get(`/quotes/`)
     .then((response) => {
-      console.log("data:", response.data);
       this.setState({
         quotes: response.data
-      }, () => {
-        console.log(this.state)
       })
     })
     .catch(function (error) {

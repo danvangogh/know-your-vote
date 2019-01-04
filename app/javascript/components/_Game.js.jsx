@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cards from "./_Cards.js.jsx";
 import ResultsCard from './_ResultsCard.js.jsx'
-import axios from 'axios';
 
 class Game extends Component {
   constructor(props){
@@ -27,7 +26,6 @@ class Game extends Component {
       newScores[voted_party_id] = (newScores[voted_party_id]||0) + 1;
       let newQuestion = question;
       newQuestion = newQuestion + 1;
-      console.log("done Right")
       return {scores: newScores, question: newQuestion};
     });
   }
@@ -36,13 +34,11 @@ class Game extends Component {
       let newScores = {...scores};
       let newQuestion = question;
       newQuestion = newQuestion + 1;
-      console.log("done Left")
       return {scores: newScores, question: newQuestion};
     });
   }
 
   render() {
-
     const isDonePlay = this.state.question;
     let card;
 
@@ -55,9 +51,6 @@ class Game extends Component {
               <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} />
             </div>
     }
-
-
-    console.log("this.state:", this.state);
     return (
       <div>
         {card}

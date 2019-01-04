@@ -20,6 +20,27 @@ $dark-grey: rgba(0, 0, 0, 0.4);
   }
 }
 
+/*  ================ TOPICS PAGE ================ */
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+P {
+  font-size: 0.85em;
+}
+
+.heading {
+  text-align: center;
+  padding: 0.5em 0em;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
 /*  ================ COLUMN SETUP ================ */
 
 .col {
@@ -263,6 +284,7 @@ button.btn.btn-primary {
   color: black;
   border-top: 1px solid black;
   padding: 0.5em;
+  bottom: 0;
   &:hover {
     text-decoration: none;
   }
@@ -270,4 +292,5 @@ button.btn.btn-primary {
 
 .admin-div {
   text-align: center;
+  margin-top: 1em;
 }
