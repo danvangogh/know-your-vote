@@ -25,8 +25,6 @@ class DeleteTopic extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log("got to function- s", e)
-    console.log("this.state: ", this.state.topicToDelete.name)
     axios.delete(`/admin/topics/${this.state.topicToDelete.id}`, {
     });
   }
