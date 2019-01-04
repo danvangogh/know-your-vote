@@ -47,7 +47,7 @@ class Main extends Component {
               <Route path='/' render={() => <Redirect to='/'/>}/>
             </Switch>
             <div className="admin-div">
-              <Link to="/admin" className="admin-link">Admin</Link>
+              <a href="/admin" className="admin-link">Admin</a>
             </div>
             <MediaQuery maxWidth={575}>
               <footer className="mobile-footer">

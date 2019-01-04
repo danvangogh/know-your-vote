@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
-import NavBar from './_navbar.js';
 import axios from 'axios';
 
-
+import NavBar from './_navbar.js';
 import TopicForm from './_AdminTopicForm.js.jsx'
 import QuoteForm from './_AdminQuoteForm.js.jsx'
 import DeleteTopic from './_AdminDeleteTopic.js.jsx'
@@ -38,11 +37,14 @@ class Admin extends Component {
 
   render() {
     return (
-      <div>
-        <TopicForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
-        <DeleteTopic parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
-        <QuoteForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
-      </div>
+      <Router>
+        <div>
+          <NavBar />
+          <TopicForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+          <DeleteTopic parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+          <QuoteForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+        </div>
+      </Router>
     )
   }
 }
