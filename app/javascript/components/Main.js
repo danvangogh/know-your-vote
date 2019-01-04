@@ -40,7 +40,7 @@ class Main extends Component {
             <NavBar />
             <Switch>
               <Route path="/admin" component={Admin}/>
-              <Route path="/game" component={Swipe}/>
+              <Route path="/game" component={Game}/>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
               <Route path='/' exact render={(routerProps) =>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Swipe from './_swipe.js'
 
 class Cards extends Component {
   constructor(props){
@@ -16,10 +17,18 @@ class Cards extends Component {
       this.setState({
         quotes: response.data
       })
+      console.log("response.data: ", response.data)
     })
     .catch(function (error) {
       return error;
     });
+  }
+  quotesText = arr => {
+    const textArr = [];
+    arr.forEach(function(quote) {
+      textArr.push(quote.text)
+    })
+    return textArr;
   }
 
   generateRandom = (min, max) => {
@@ -37,25 +46,7 @@ class Cards extends Component {
     const randomQuote = this.state.quotes[quoteIndex];
     return (
       <div>
-        <section className="results-card">
-          <div className="mobile-modal-body">
-            <div className="mobile-matched-with quotearea">
-              <i className="fas fa-quote-left quotation-left"></i>
-              <h4 className="quote">{randomQuote.text}</h4>
-              <i className="fas fa-quote-right quotation-right"></i>
-              <div className="buttons">
-                <button
-                  className="dissBtn"
-                  onClick={() => this.props.leftSwipe(randomQuote.party_id)}>Dislike
-                </button>
-                <button
-                  className="likeBtn"
-                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}>Like
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Swipe quotes={this.quotesText} />
       </div>
     )
   }

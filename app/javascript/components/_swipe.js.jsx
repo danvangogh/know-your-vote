@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Swipeable from "react-swipy";
 import Card from './Card';
 
-
 const appStyles = {
   height: "100%",
   display: "flex",
@@ -22,20 +21,22 @@ const actionsStyles = {
 };
 
 class Swipe extends Component {
-  state = {
-    cards: ["First", "Second", "Third", "Fourth", "Fifth"]
-  };
+  constructor(props) {
+    super(props)
+  }
 
   remove = () =>
-    this.setState(({ cards }) => ({ cards: cards.slice(1, cards.length) }));
+    quotes.slice(1, quotes.length);
 
   render() {
-    const { cards } = this.state;
+    console.log("this.props", this.props)
+    const quotes = this.props.quotes;
+    console.log("quotes ", quotes)
 
     return (
       <div style={appStyles}>
         <div style={wrapperStyles}>
-          {cards.length > 0 && (
+          {quotes.length > 0 && (
             <div style={wrapperStyles}>
               <Swipeable
                 buttons={({ right, left }) => (
@@ -46,12 +47,12 @@ class Swipe extends Component {
                 )}
                 onAfterSwipe={this.remove}
               >
-                <Card>{cards[0]}</Card>
+                <Card>{quotes[0]}</Card>
               </Swipeable>
-              {cards.length > 1 && <Card zIndex={-1}>{cards[1]}</Card>}
+              {quotes.length > 1 && <Card zIndex={-1}>{quotes[1]}</Card>}
             </div>
           )}
-          {cards.length <= 1 && <Card zIndex={-2}>No more cards</Card>}
+          {quotes.length <= 1 && <Card zIndex={-2}>No more quotes</Card>}
         </div>
       </div>
     );
@@ -59,78 +60,3 @@ class Swipe extends Component {
 }
 
 export default Swipe;
-
-
-
-// import React, { Component } from 'react';
-// import Cards, { Card } from 'react-swipe-card';
- 
- 
-// // const data = ['Alexandre', 'Thomas', 'Lucien']
- 
-// // class Swipe extends Component {
-// //   constructor(props) {
-// //     super(props)
-// //   }
-// //   render() {
-// //     return(
-// //       <Cards onEnd={console.log("action('end')")}>
-// //         {data.map(item => 
-// //           <Card 
-// //             key={item}
-// //             onSwipeLeft={console.log("action('swipe left')")} 
-// //             onSwipeRight={console.log("action('swipe right')")}>
-// //             <h2>{item}</h2>
-// //           </Card>
-// //         )}
-// //       </Cards>
-// //     )
-// //   }
-// // }
-
-// // export default Swipe;
-
-
-// const Wrapper = ({data, onSwipeLeft, onSwipeRight}) => {
-//   return (
-//     <Cards onEnd={console.log("action('end')")} className='master-root'>
-//       {data.map(item =>
-//         <Card 
-//           key={item}
-//           onSwipeLeft={()=>{console.log("action('swipe left')")}} 
-//           onSwipeRight={() => {console.log("action('swipe right')")}}>
-//           <h2>{item}</h2>
-//         </Card>
-//       )}
-//     </Cards>
-//   )
-// }
-
-// export default class MyCards extends Component {
-//   state = {
-//     data: ['Alexandre', 'Thomas', 'Lucien', 'Raphael', 'Donatello', 'Michelangelo', 'Leonardo'],
-//     liked: [],
-//     disliked: []
-//   }
-//   onSwipeLeft = () => {
-//      const newData = this.state.data.slice(1);
-//      this.setState(prevState => ({ data: newData, disliked: [...prevState.disliked, prevState.data[0]]}));
-//   }
-//   onSwipeRight = () => {
-//     const newData = this.state.data.slice(1);
-//     this.setState(prevState => ({ data: newData, liked: [...prevState.liked, prevState.data[0]] }));
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <Wrapper 
-//           onSwipeLeft={this.onSwipeLeft}
-//           onSwipeRight={this.onSwipeRight}
-//           data={this.state.data}
-//         />
-//         <ul>Liked: {this.state.liked.map(data => <li>{data}</li>)}</ul>
-//         <ul>Disliked: {this.state.disliked.map(data => <li>{data}</li>)}</ul>
-//       </div>
-//     )
-//   }
-// }
