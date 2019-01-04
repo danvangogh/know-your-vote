@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import NavBar from './_navbar.js';
-import TopicPage from './_TopicPage.js.jsx'
-import TopicsPage from './_TopicsPage.js.jsx'
-import Cards from './_Cards.js.jsx'
-import Game from './_Game.js.jsx'
-import ResultsCard from './_ResultsCard.js.jsx'
+import TopicPage from './_TopicPage.js.jsx';
+import TopicsPage from './_TopicsPage.js.jsx';
+import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
@@ -41,12 +39,16 @@ class Main extends Component {
             <NavBar />
             <Switch>
               <Route path="/admin" component={Admin}/>
+              <Route path="/game" component={Game}/>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
               <Route path='/' exact render={(routerProps) =>
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
               <Route path='/' render={() => <Redirect to='/'/>}/>
             </Switch>
+            <div className="admin-div">
+              <Link to="/admin" className="admin-link">Admin</Link>
+            </div>
             <MediaQuery maxWidth={575}>
               <footer className="mobile-footer">
                 <div className="home-icon">
@@ -56,7 +58,9 @@ class Main extends Component {
                 </div>
                 <p className="split">|</p>
                 <div className="heart-icon">
-                  <i className="far fa-heart"></i>
+                  <Link to="/game">
+                    <i className="far fa-heart"></i>
+                  </Link>
                 </div>
               </footer>
             </MediaQuery>

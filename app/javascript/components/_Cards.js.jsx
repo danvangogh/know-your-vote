@@ -13,11 +13,8 @@ class Cards extends Component {
   componentDidMount() {
     axios.get(`/quotes/`)
     .then((response) => {
-      console.log("data:", response.data);
       this.setState({
         quotes: response.data
-      }, () => {
-        console.log(this.state)
       })
     })
     .catch(function (error) {
@@ -43,9 +40,9 @@ class Cards extends Component {
         <section className="results-card">
           <div className="mobile-modal-body">
             <div className="mobile-matched-with quotearea">
-              <i class="fas fa-quote-left quotation-left"></i>
+              <i className="fas fa-quote-left quotation-left"></i>
               <h4 className="quote">{randomQuote.text}</h4>
-              <i class="fas fa-quote-right quotation-right"></i>
+              <i className="fas fa-quote-right quotation-right"></i>
               <div className="buttons">
                 <button
                   className="dissBtn"

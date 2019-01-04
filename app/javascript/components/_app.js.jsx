@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import axios from 'axios';
+import Game from './_Game.js';
 
 class App extends React.Component {
   state = {

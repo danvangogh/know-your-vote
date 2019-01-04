@@ -12,20 +12,14 @@ class ResultsCard extends Component {
 
   componentDidMount() {
     let resultsNum = this.props.count;
-    console.log("resultsNum: ", resultsNum)
     let myMatch = Object.keys(resultsNum).reduce((a, b) => resultsNum[a] > resultsNum[b] ? a : b);
-    console.log("myMatch: ", myMatch)
     this.setState({
       winner: myMatch
     });
     const id = myMatch;
-    console.log("IIIIIDDDDDD: ", id)
     axios.get(`/parties/${id}`)
     .then((response) => {
-      console.log("topics data:", response.data);
-      this.setState({ parties: response.data }, () => {
-        console.log("this.state.parties: ", this.state.parties)
-      }).bind(this)
+      this.setState({ parties: response.data }).bind(this)
     })
     .catch(function (error) {
       return error;
@@ -43,9 +37,9 @@ class ResultsCard extends Component {
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
-              <span className="announcement">
+              <div className="announcement">
                 <h4>You Matched With...</h4>
-              </span>
+              </div>
             <div className="matched-with">
               <span className="image">
                 <img className="match-photo image" src={this.state.parties.Image_Url} />
