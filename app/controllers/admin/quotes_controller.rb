@@ -9,6 +9,10 @@ class Admin::QuotesController < ApplicationController
     render json: @quote
   end
 
+  def destroy
+    @quote = Quote.delete(quote_id)
+  end
+
   private
 
   def quote_params

@@ -20,7 +20,6 @@ class TopicForm extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log("got to function")
 
     axios.post('/admin/topics', {
       name: this.state.name,
@@ -45,7 +44,7 @@ class TopicForm extends Component {
       <form onSubmit={this.onSubmit}>
         <h4 className="admin add-topic">Add a Topic</h4>
         <div className="form-group">
-          <label for="topic-name">Name</label>
+          <label>Name</label>
           <input
             type="text"
             className="form-control"
@@ -54,7 +53,7 @@ class TopicForm extends Component {
             onChange={this.onChange}/>
         </div>
         <div className="form-group">
-          <label for="topic-description">Description</label>
+          <label>Description</label>
           <textarea
             className="form-control"
             rows="3"
@@ -63,7 +62,7 @@ class TopicForm extends Component {
             onChange={this.onChange}/>
         </div>
         <div className="form-group">
-          <label for="topic-description">Good</label>
+          <label>Good</label>
           <textarea
             className="form-control"
             rows="3"
@@ -72,7 +71,7 @@ class TopicForm extends Component {
             onChange={this.onChange}/>
         </div>
         <div className="form-group">
-          <label for="topic-description">Bad</label>
+          <label>Bad</label>
           <textarea
             className="form-control"
             rows="3"
@@ -81,7 +80,7 @@ class TopicForm extends Component {
             onChange={this.onChange}/>
         </div>
         <div className="form-group">
-          <label for="topic-name">Add Topic Image URL</label>
+          <label>Add Topic Image URL</label>
           <input
             type="text"
             className="form-control"
@@ -90,7 +89,7 @@ class TopicForm extends Component {
             onChange={this.onChange}/>
         </div>
         <div className="form-group">
-          <label for="topic-name">Twitter collection URL</label>
+          <label>Twitter collection URL</label>
           <input
             type="text"
             className="form-control"
