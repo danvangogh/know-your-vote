@@ -44,7 +44,7 @@ class ResultsCard extends Component {
               </div>
             <div className="matched-with">
               <span className="image">
-                <ScoreGraph count={this.props.count} />
+                <img className="match-photo image" src={this.state.parties.Image_Url} />
               </span>
             </div>
             <div className="matched-with">
@@ -57,10 +57,11 @@ class ResultsCard extends Component {
             <div className="matched-with">
               <div className=""></div>
               <div className=""></div>
-              <div className="party-result">GRN: {this.props.count[1]}</div>
-              <div className="party-result">NDP: {this.props.count[2]}</div>
-              <div className="party-result">LIB: {this.props.count[3]}</div>
-              <div className="party-result">CP: {this.props.count[4]}</div>
+              <div className=""></div>
+              <div className="party-result">
+                <ScoreGraph count={this.props.count} />
+              </div>
+              <div className=""></div>
               <div className=""></div>
               <div className=""></div>
             </div>
