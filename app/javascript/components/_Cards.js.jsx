@@ -44,9 +44,8 @@ class Cards extends Component {
     const quoteIndex = this.generateRandom(0, qLength - 1)
     const randomQuote = this.state.quotes[quoteIndex];
     return (
-      <div>
-        <Swipeable 
-          buttons={({ right, left }) => (
+      <div className="whole-card">
+        <Swipeable buttons={({ right, left }) => (
             <div className="buttons">
               <button className="dissBtn"
                 onClick={() => {this.props.leftSwipe(randomQuote.party_id); left();}}>Dislike
@@ -56,7 +55,6 @@ class Cards extends Component {
               </button>
             </div>
           )}
-          
           >
           <section className="results-card">
             <div className="mobile-modal-body">

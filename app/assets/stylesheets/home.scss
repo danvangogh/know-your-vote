@@ -5,6 +5,18 @@
 $main-font: 'Francois One', sans-serif;
 $dark-grey: rgba(0, 0, 0, 0.4);
 
+body, html {
+  height: 100%; 
+  margin: 0;
+}
+
+// .bg {
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-image: url(canadian-flag.jpg);
+//   height: 100%;
+// }
 .section {
   clear: both;
   padding: 0px;
@@ -129,9 +141,14 @@ P {
 }
 
 .button {
-  color: black;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #252627;
+  transition: transform .2s;
   &:hover {
     text-decoration: none;
+    transform: scale(1.1);
   }
 }
 
@@ -239,6 +256,7 @@ P {
     max-width: 570px;
     padding: 0px;
   }
+
   p {
     font-size: 0.8em;
   }
