@@ -33,9 +33,5 @@ class CompareResults extends Component {
       }
       return res;
     }
-
-    return(
-
-    )
   }
 }
