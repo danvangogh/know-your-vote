@@ -7,6 +7,7 @@ import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
+import App from './_app.js';
 
 
 class Main extends Component {
@@ -34,21 +35,29 @@ class Main extends Component {
 
   render() {
     return(
-      <div className="bg">
+      <div id="container">
         <Router>
-          <div>
+          <div id="body">
             <NavBar />
             <Switch>
               <Route path="/admin" component={Admin}/>
               <Route path="/game" component={Game}/>
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
-              <Route path='/' exact render={(routerProps) =>
+              <Route path='/currentTopics' exact render={(routerProps) =>
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
-              <Route path='/' render={() => <Redirect to='/'/>}/>
+              <Route path='/' component={App}/>
             </Switch>
             <div className="admin-div">
-              <a href="/admin" className="admin-link">Admin</a>
+              <div>
+                <a href="/admin" className="admin-link">Admin</a>
+              </div>
+              <div className="social-media">
+                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-linkedin-in"></i>
+                <i className="fab fa-twitter"></i>
+                <i className="fab fa-github"></i>
+              </div>
             </div>
             <MediaQuery maxWidth={575}>
               <footer className="mobile-footer">
