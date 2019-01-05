@@ -12,4 +12,6 @@ Rails.application.routes.draw do
     resources :quotes, only: [:show, :index, :create, :update, :destroy]
   end
 
+  get '*path' => redirect('/')
+
 end
