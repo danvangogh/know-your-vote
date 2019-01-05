@@ -58,6 +58,11 @@
   align-content: center;
 }
 
+@media (min-width: 576px) {
+  .results-card {
+    width: 550px;
+  }
+}
 .mobile-matched-with {
 	display: grid;
 	grid-template-columns:repeat(8, 1fr);
@@ -94,18 +99,18 @@
 
 .quotation-left, .quotation-right {
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   opacity: 0.6;
 }
 
 .quotation-left {
   grid-area: start;
-  margin-left: 1em;
+  margin-left: 0.5em;
   margin-top: 1em;
 }
 .quotation-right {
   grid-area: end;
-  margin-right: 1em;
+  margin-right: 0.5em;
   align-self: end;
 }
 

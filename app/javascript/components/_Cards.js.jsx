@@ -56,16 +56,17 @@ class Cards extends Component {
               </button>
             </div>
           )}
-        >
-        <section className="results-card">
-          <div className="mobile-modal-body">
-            <div className="mobile-matched-with quotearea">
-              <i className="fas fa-quote-left quotation-left"></i>
-              <h4 className="quote">{randomQuote.text}</h4>
-              <i className="fas fa-quote-right quotation-right"></i>
+          
+          >
+          <section className="results-card">
+            <div className="mobile-modal-body">
+              <div className="mobile-matched-with quotearea">
+                <i className="fas fa-quote-left quotation-left"></i>
+                <h4 className="quote">{randomQuote.text}</h4>
+                <i className="fas fa-quote-right quotation-right"></i>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
         </Swipeable>
       </div>
     )

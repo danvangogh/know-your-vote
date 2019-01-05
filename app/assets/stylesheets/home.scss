@@ -162,7 +162,7 @@ P {
 
 /*  ================ GO FULL WIDTH AT LESS THAN 575 PIXELS ================ */
 
-@media only screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .span_3_of_3, .span_2_of_3, .span_1_of_3 {
     width: 100%;
   }
@@ -260,7 +260,7 @@ form {
   padding-bottom: 0.5em;
 }
 
-@media only screen and (max-width: 575px) {
+@media (max-width: 575px) {
   select#exampleFormControlSelect1 {
     width: 100%;
   }
@@ -293,4 +293,8 @@ button.btn.btn-primary {
 .admin-div {
   text-align: center;
   margin-top: 1em;
+}
+
+iframe#twitter-widget-1 {
+  height: 80vh;
 }
