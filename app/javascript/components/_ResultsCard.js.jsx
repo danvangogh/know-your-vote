@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import ScoreGraph from './_ScoreGraph.js'
+
 class ResultsCard extends Component {
   constructor(props){
     super(props)
@@ -55,10 +57,11 @@ class ResultsCard extends Component {
             <div className="matched-with">
               <div className=""></div>
               <div className=""></div>
-              <div className="party-result">GRN: {this.props.count[1]}</div>
-              <div className="party-result">NDP: {this.props.count[2]}</div>
-              <div className="party-result">LIB: {this.props.count[3]}</div>
-              <div className="party-result">CP: {this.props.count[4]}</div>
+              <div className=""></div>
+              <div className="party-result">
+                <ScoreGraph count={this.props.count} />
+              </div>
+              <div className=""></div>
               <div className=""></div>
               <div className=""></div>
             </div>

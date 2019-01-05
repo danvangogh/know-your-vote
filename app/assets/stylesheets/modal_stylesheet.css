@@ -25,16 +25,15 @@
   box-shadow: 0 0 .5pt 2.5pt white;
 }
 
-
 .matched-with {
 	display: grid;
-	grid-template-columns:repeat(8, 1fr);
+	grid-template-columns:repeat(7, 1fr);
 	justify-items: center;
 	grid-template-areas:
-	"a a a a a a a a"
-	". b b b b b b ."
-	". . c c c c . ."
-	". . d d d d . ."
+	"a a a a a a a"
+	". b b b b b ."
+	". c c c c c ."
+	". . d d d . ."
 	;
 	grid-row-gap: .5em;
 }
@@ -48,7 +47,8 @@
 }
 .image {
 	grid-area: b;
-	width: 100%;
+	width: 90%;
+  margin-left: auto
 }
 .leader-result {
 	grid-area: c

@@ -22,7 +22,7 @@ class Cards extends Component {
       return error;
     });
   }
-  
+
   quotesText = arr => {
     const textArr = [];
     arr.forEach(function(quote) {
@@ -56,7 +56,7 @@ class Cards extends Component {
             </div>
           )}
           >
-          <section className="results-card">
+          <section className="play-card">
             <div className="mobile-modal-body">
               <div className="mobile-matched-with quotearea">
                 <i className="fas fa-quote-left quotation-left"></i>
