@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import ScoreGraph from './_ScoreGraph.js'
+
 class ResultsCard extends Component {
   constructor(props){
     super(props)
@@ -42,7 +44,7 @@ class ResultsCard extends Component {
               </div>
             <div className="matched-with">
               <span className="image">
-                <img className="match-photo image" src={this.state.parties.Image_Url} />
+                <ScoreGraph count={this.props.count} />
               </span>
             </div>
             <div className="matched-with">
