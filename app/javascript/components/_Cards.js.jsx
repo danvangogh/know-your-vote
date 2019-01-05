@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Swipeable from "react-swipy";
 
 class Cards extends Component {
   constructor(props){
@@ -21,6 +22,14 @@ class Cards extends Component {
       return error;
     });
   }
+  
+  quotesText = arr => {
+    const textArr = [];
+    arr.forEach(function(quote) {
+      textArr.push(quote.text)
+    })
+    return textArr;
+  }
 
   generateRandom = (min, max) => {
     const x = Math.random() * (max - min) + min;
@@ -31,31 +40,32 @@ class Cards extends Component {
     if (this.state.quotes.length === 0) {
       return <p>Loading...</p>
     }
-
     const qLength = this.state.quotes.length
     const quoteIndex = this.generateRandom(0, qLength - 1)
     const randomQuote = this.state.quotes[quoteIndex];
     return (
-      <div>
-        <section className="results-card">
-          <div className="mobile-modal-body">
-            <div className="mobile-matched-with quotearea">
-              <i className="fas fa-quote-left quotation-left"></i>
-              <h4 className="quote">{randomQuote.text}</h4>
-              <i className="fas fa-quote-right quotation-right"></i>
-              <div className="buttons">
-                <button
-                  className="dissBtn"
-                  onClick={() => this.props.leftSwipe(randomQuote.party_id)}>Dislike
-                </button>
-                <button
-                  className="likeBtn"
-                  onClick={() => this.props.rightSwipe(randomQuote.party_id)}>Like
-                </button>
+      <div className="whole-card">
+        <Swipeable buttons={({ right, left }) => (
+            <div className="buttons">
+              <button className="dissBtn"
+                onClick={() => {this.props.leftSwipe(randomQuote.party_id); left();}}>Dislike
+              </button>
+              <button className="likeBtn"
+                onClick={() => {this.props.rightSwipe(randomQuote.party_id); right();}}>Like
+              </button>
+            </div>
+          )}
+          >
+          <section className="results-card">
+            <div className="mobile-modal-body">
+              <div className="mobile-matched-with quotearea">
+                <i className="fas fa-quote-left quotation-left"></i>
+                <h4 className="quote">{randomQuote.text}</h4>
+                <i className="fas fa-quote-right quotation-right"></i>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Swipeable>
       </div>
     )
   }

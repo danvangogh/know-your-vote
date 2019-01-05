@@ -8,6 +8,7 @@ import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
 
+
 class Main extends Component {
   constructor(props){
     super(props)
@@ -33,7 +34,7 @@ class Main extends Component {
 
   render() {
     return(
-      <div>
+      <div className="bg">
         <Router>
           <div>
             <NavBar />

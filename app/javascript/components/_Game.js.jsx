@@ -42,7 +42,11 @@ class Game extends Component {
     const isDonePlay = this.state.question;
     let card;
 
+<<<<<<< HEAD
     if (isDonePlay >= 8) {
+=======
+    if (isDonePlay >= 10) {
+>>>>>>> master
       card = <div>
               <ResultsCard count={this.state.scores} />
             </div>

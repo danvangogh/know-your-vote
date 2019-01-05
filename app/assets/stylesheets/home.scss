@@ -5,6 +5,18 @@
 $main-font: 'Francois One', sans-serif;
 $dark-grey: rgba(0, 0, 0, 0.4);
 
+body, html {
+  height: 100%; 
+  margin: 0;
+}
+
+// .bg {
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-image: url(canadian-flag.jpg);
+//   height: 100%;
+// }
 .section {
   clear: both;
   padding: 0px;
@@ -129,9 +141,14 @@ P {
 }
 
 .button {
-  color: black;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #252627;
+  transition: transform .2s;
   &:hover {
     text-decoration: none;
+    transform: scale(1.1);
   }
 }
 
@@ -162,7 +179,7 @@ P {
 
 /*  ================ GO FULL WIDTH AT LESS THAN 575 PIXELS ================ */
 
-@media only screen and (max-width: 575px) {
+@media (max-width: 575px) {
   .span_3_of_3, .span_2_of_3, .span_1_of_3 {
     width: 100%;
   }
@@ -239,6 +256,7 @@ P {
     max-width: 570px;
     padding: 0px;
   }
+
   p {
     font-size: 0.8em;
   }
@@ -260,7 +278,7 @@ form {
   padding-bottom: 0.5em;
 }
 
-@media only screen and (max-width: 575px) {
+@media (max-width: 575px) {
   select#exampleFormControlSelect1 {
     width: 100%;
   }
@@ -293,4 +311,8 @@ button.btn.btn-primary {
 .admin-div {
   text-align: center;
   margin-top: 1em;
+}
+
+iframe#twitter-widget-1 {
+  height: 80vh;
 }

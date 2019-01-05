@@ -52,7 +52,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" autoHeight/>
+                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
                       </div>
                     </div>
                   </blockquote>
