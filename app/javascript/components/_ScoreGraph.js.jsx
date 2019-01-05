@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line, Radar } from 'react-chartjs-2';
 
 Chart.defaults.global.defaultFontColor = 'white';
 
@@ -29,8 +29,7 @@ class ScoreGraph extends Component {
       <div>
         <Bar
           data={data}
-          width={200}
-          height={50}
+          height={100}
           options={{
             maintainAspectRatio: true,
           }}
@@ -39,10 +38,11 @@ class ScoreGraph extends Component {
           }}
           scales={{
             xAxes: [{
-              ticks: {
-                beginAtZero:true,
+              ticks: [{
+                beginAtZero: true,
                 display: true,
-              }
+                lineHeight: 36
+              }]
             }]
 }}
         />
