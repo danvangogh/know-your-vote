@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20190105225112) do
     t.string "twitter_url"
   end
 
-  create_table "vote_results", force: :cascade do |t|
+  create_table "results", force: :cascade do |t|
     t.integer "grn"
     t.integer "ndp"
     t.integer "lib"

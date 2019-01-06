@@ -7,6 +7,7 @@ import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
+import CompareResults from './_CompareResults.js'
 
 
 class Main extends Component {
@@ -38,6 +39,7 @@ class Main extends Component {
         <Router>
           <div>
             <NavBar />
+            <CompareResults />
             <Switch>
               <Route path="/admin" component={Admin}/>
               <Route path="/game" component={Game}/>

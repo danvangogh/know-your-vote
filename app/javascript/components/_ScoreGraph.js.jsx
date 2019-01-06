@@ -13,9 +13,6 @@ class ScoreGraph extends Component {
     const ndpRes = this.props.count[2]
     const libRes = this.props.count[3]
     const cpRes = this.props.count[4]
-    console.log("this.props.count: ", this.props.count)
-    console.log("ndpRes: ", ndpRes)
-    console.log("libRes: ", libRes)
 
     const data = {
       labels: ['GRN', 'NDP', 'LIB', 'CP'],

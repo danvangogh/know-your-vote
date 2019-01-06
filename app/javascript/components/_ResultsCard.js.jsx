@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 import ScoreGraph from './_ScoreGraph.js'
 
 class ResultsCard extends Component {
@@ -27,7 +26,6 @@ class ResultsCard extends Component {
       return error;
     });
 }
-
 
   render() {
 

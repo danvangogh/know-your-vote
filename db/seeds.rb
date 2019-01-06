@@ -102,3 +102,15 @@ topics = Topic.create!([
   photo_url: "https://i.ibb.co/LRVFFDm/eric.jpg"
   },
   ])
+
+results = Result.create!([
+  {grn: 2, ndp: 3, lib: 3, cp: 1},
+  {grn: 2, ndp: 3, lib: 3, cp: 2},
+  {grn: 6, ndp: 2, lib: 0, cp: 0},
+  {grn: 4, ndp: 1, lib: 1, cp: 1},
+  {grn: 2, ndp: 2, lib: 4, cp: 0},
+  {grn: 0, ndp: 1, lib: 0, cp: 6},
+  {grn: 0, ndp: 3, lib: 1, cp: 3},
+  {grn: 1, ndp: 1, lib: 5, cp: 2},
+  {grn: 0, ndp: 5, lib: 2, cp: 3},
+  ])
