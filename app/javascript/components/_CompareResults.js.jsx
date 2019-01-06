@@ -117,27 +117,17 @@ class CompareResults extends Component {
       <div>
         <section className="results-card">
           <div className="mobile-modal-body">
-              <div className="announcement">
-                <h4>See how you compare...</h4>
-              </div>
+            <div className="announcement">
+              <h4>See how you compare...</h4>
+            </div>
             <div className="matched-with">
               <Line data={data} />
             </div>
-            <div className="matched-with">
-              <span className="leader-result quotearea">
-              </span>
-            </div>
-            <br />
-            <div className="matched-with">
-              <div className=""></div>
-              <div className=""></div>
-              <div className=""></div>
-              <div className="party-result">
-              </div>
-              <div className=""></div>
-              <div className=""></div>
-              <div className=""></div>
-            </div>
+
+            <span className="leader-result quotearea">
+            <h4>Take the test again</h4>
+            </span>
+
           </div>
         </section>
       </div>

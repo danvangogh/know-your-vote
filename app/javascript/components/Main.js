@@ -40,7 +40,6 @@ class Main extends Component {
         <Router>
           <div id="body">
             <NavBar />
-            <Game />
             <Switch>
               <Route path='/' exact component={App}/>
               <Route path="/admin" component={Admin}/>

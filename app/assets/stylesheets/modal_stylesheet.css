@@ -34,6 +34,7 @@
 	". b b b b b ."
 	". c c c c c ."
 	". . d d d . ."
+  ". e e e e e ."
 	;
 	grid-row-gap: .5em;
 }
@@ -51,8 +52,14 @@
   margin-left: auto
 }
 .leader-result {
-	grid-area: c
+	grid-area: c;
 }
 .party-count {
 	grid-area: d;
+}
+
+.cardFootButton {
+  margin-top: 1em;
+  color: white;
+  grid-area: e;
 }

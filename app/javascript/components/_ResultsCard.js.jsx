@@ -51,35 +51,29 @@ class ResultsCard extends Component {
                   <h4>You Matched With...</h4>
                 </div>
               <div className="matched-with">
+
                 <span className="image">
                   <img className="match-photo image" src={this.state.parties.Image_Url} />
                 </span>
-              </div>
-              <div className="matched-with">
+
                 <span className="leader-result quotearea">
                   <h5>{this.state.parties.Leadername}</h5>
                   <h6>{this.state.parties.name}</h6>
                 </span>
-              </div>
-              <div className="matched-with">
-                <div className=""></div>
-                <div className=""></div>
-                <div className=""></div>
-                <div className="party-result">
+
+                <div className="party-result party-count">
                   <ScoreGraph count={this.props.count} />
                 </div>
-                <div className=""></div>
-                <div className=""></div>
-                <div className=""></div>
+
+                <div className="cardFootButton">
+                  <button
+                    type="button"
+                    className="comparisonButton"
+                    onClick={this.showCompare}>See how I compare...</button>
+                </div>
               </div>
             </div>
           </section>
-          <div>
-            <button
-              type="button"
-              className="button"
-              onClick={this.showCompare}>See how I compare...</button>
-          </div>
         </div>
       )
     } else {
