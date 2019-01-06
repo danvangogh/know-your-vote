@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import TopicsPage from './_TopicsPage.js'
 
 class DeleteTopic extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class DeleteTopic extends Component {
 
   render() {
 
-    if (this.state.redirect) return <Redirect to={'/'} />;
+    if (this.state.redirect) return <Route path='/' exact component={TopicsPage} />;
 
     return(
       <div>
@@ -64,6 +65,7 @@ class DeleteTopic extends Component {
             type="submit"
             className="btn btn-primary">Submit</button>
         </form>
+        {this.}
       </div>
     )
   }
