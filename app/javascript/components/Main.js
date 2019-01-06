@@ -7,7 +7,8 @@ import Game from './_Game.js.jsx';
 import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
-import CompareResults from './_CompareResults.js'
+import App from './_app.js';
+import Footer from './_footer.js.jsx';
 
 
 class Main extends Component {
@@ -35,23 +36,24 @@ class Main extends Component {
 
   render() {
     return(
-      <div className="bg">
+      <div id="container">
         <Router>
-          <div>
+          <div id="body">
             <NavBar />
             <CompareResults />
             <Switch>
+              <Route path='/' exact component={App}/>
               <Route path="/admin" component={Admin}/>
               <Route path="/game" component={Game}/>
+
               <Route path='/topics/:topic/:id' render={(routerProps) =>
                 <TopicPage {...routerProps} topics={this.state.topics}/> }/>
-              <Route path='/' exact render={(routerProps) =>
+
+              <Route path='/currentTopics' render={(routerProps) =>
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
-              <Route path='/' render={() => <Redirect to='/'/>}/>
+
             </Switch>
-            <div className="admin-div">
-              <a href="/admin" className="admin-link">Admin</a>
-            </div>
+            <Footer />
             <MediaQuery maxWidth={575}>
               <footer className="mobile-footer">
                 <div className="home-icon">
@@ -59,7 +61,13 @@ class Main extends Component {
                     <i className="fas fa-home"></i>
                   </Link>
                 </div>
-                <p className="split">|</p>
+                <p className="split-one">|</p>
+                <div className="topic-icon">
+                  <Link to="/currentTopics">
+                    <i className="far fa-comment"></i>
+                  </Link>
+                </div>
+                <p className="split-two">|</p>
                 <div className="heart-icon">
                   <Link to="/game">
                     <i className="far fa-heart"></i>

@@ -28,6 +28,7 @@ class NavBar extends React.Component {
           <a href="/" className="name">KNOW YOUR VOTE</a>
           <MediaQuery minWidth={576}>
             <button type="button" className="button" onClick={this.onOpenModal}>Find my Poli-match</button>
+            <button type="button" className="button"><Link to="/currentTopics">Current Topics</Link></button>
           </MediaQuery>
         </div>
         <div>
