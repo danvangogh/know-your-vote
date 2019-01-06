@@ -69,7 +69,13 @@ class Main extends Component {
                     <i className="fas fa-home"></i>
                   </Link>
                 </div>
-                <p className="split">|</p>
+                <p className="split-one">|</p>
+                <div className="topic-icon">
+                  <Link to="/currentTopics">
+                    <i class="far fa-comment-alt"></i>
+                  </Link>
+                </div>
+                <p className="split-two">|</p>
                 <div className="heart-icon">
                   <Link to="/game">
                     <i className="far fa-heart"></i>

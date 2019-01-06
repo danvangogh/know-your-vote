@@ -12,15 +12,10 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(7 1fr);
+  grid-template-columns: repeat(9 1fr);
   grid-template-areas:
-  ". a . . c . . b ."
+  ". a . d . c . e . b ."
   ;
-}
-
-.heart-icon {
-  grid-area: b;
-  font-size: 1em;
 }
 
 .home-icon {
@@ -28,12 +23,25 @@
   font-size: 1em;
 }
 
-
-.split {
-  grid-area: c;
+.heart-icon {
+  grid-area: b;
+  font-size: 1em;
 }
 
-.fa-home, .fa-heart {
+.topic-icon {
+  grid-area: c;
+  font-size: 1em;
+}
+
+.split-one {
+  grid-area: d;
+}
+
+.split-two {
+  grid-area: e;
+}
+
+.fa-home, .fa-heart, .fa-comment-alt {
   color: rgb(58, 56, 56);
   &:hover {
     color: orange;
