@@ -1,4 +1,5 @@
 class ResultsController < ApplicationController
+
   def show
     @result = Result.find(params[:id])
     render json: @result
@@ -11,9 +12,16 @@ class ResultsController < ApplicationController
   end
 
   def create
-    @result = Result.new
+    @result = Result.new(result_params)
 
     @result.save
     render json: @result
   end
+
+  private
+
+  def result_params
+    params.require(:result).permit(:grn, :ndp, :lib, :cp)
+  end
+
 end
