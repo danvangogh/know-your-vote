@@ -11,7 +11,6 @@ import App from './_app.js';
 import Footer from './_footer.js.jsx';
 import CompareResults from './_CompareResults.js'
 
-
 class Main extends Component {
   constructor(props){
     super(props)
@@ -41,7 +40,7 @@ class Main extends Component {
         <Router>
           <div id="body">
             <NavBar />
-            <CompareResults />
+            <Game />
             <Switch>
               <Route path='/' exact component={App}/>
               <Route path="/admin" component={Admin}/>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ScoreGraph from './_ScoreGraph.js'
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 
 class ResultsCard extends Component {
   constructor(props){
@@ -18,7 +19,7 @@ class ResultsCard extends Component {
         <section className="results-card">
           <div className="mobile-modal-body">
               <div className="announcement">
-                <h4>See how you compare...</h4>
+                <h4>See how you comparsdfe...</h4>
               </div>
             <div className="matched-with">
               <span className="image">
