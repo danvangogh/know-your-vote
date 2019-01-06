@@ -65,7 +65,6 @@ class DeleteTopic extends Component {
             type="submit"
             className="btn btn-primary">Submit</button>
         </form>
-        {this.}
       </div>
     )
   }

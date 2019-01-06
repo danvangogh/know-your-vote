@@ -34,21 +34,27 @@ class CompareResults extends Component {
       libRes.push(party.lib)
       cpRes.push(party.cp)
     })
+
   }
 
   average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
   render() {
     const { results, grnRes, ndpRes, libRes, cpRes } = this.state;
+    const grnAvg = 0;
+    const ndpAvg = 0;
+    const libAvg = 0;
+    const cpAvg = 0;
     if (results.length === 0) {
       return <p>Loading...</p>
     }
     if ((this.state) && (grnRes.length <= 1)) {
       this.resultsSplitter(this.state.results);
-      const grnAvg = this.average(grnRes);
-      const ndpAvg = this.average(ndpRes);
-      const libAvg = this.average(libRes);
-      const cpAvg = this.average(cpRes);
+      this.grnAvg = this.average(grnRes);
+      this.ndpAvg = this.average(ndpRes);
+      this.libAvg = this.average(libRes);
+      this.cpAvg = this.average(cpRes);
+      console.log("this.cpavg: ", this.cpAvg)
     }
     const data = {
       labels: ['GRN', 'NDP', 'LIB', 'CP'],
@@ -72,7 +78,7 @@ class CompareResults extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [42, 33, 25, 60]
+          data: [this.grnAvg, this.ndpAvg, this.libAvg, this.cpAvg]
         }
       ]
     };
