@@ -10,10 +10,10 @@ Quote.delete_all
 Party.delete_all
 
 parties = Party.create!([
-  {id: 1, name: 'Green Party', Leadername: 'Elizabeth May', Image_Url: 'https://i.ibb.co/ZJvD6zD/Elizabeth-may.jpg'},
-  {id: 2, name: 'New Democratic Party', Leadername: 'Jagmeet Singh', Image_Url: 'https://i.ibb.co/x2RcFgb/Jagmeet-Singh-inline.jpg'},
-  {id: 3, name: 'Liberal Party', Leadername: 'Justin Trudeau', Image_Url: 'https://i.ibb.co/DYJ0G6M/MAC07-TRUDEAUPOST02.jpg'},
-  {id: 4, name: 'Conservative Party', Leadername: 'Andrew Scheer', Image_Url: 'https://i.ibb.co/bBFJx8m/andrew-scheer.jpg'}
+  {id: 1, name: 'Green Party', Leadername: 'Elizabeth May', Image_Url: 'https://i.ibb.co/N2n8bVL/Elizabeth-may.jpg'},
+  {id: 2, name: 'New Democratic Party', Leadername: 'Jagmeet Singh', Image_Url: 'https://i.ibb.co/fXv6nkM/Jagmeet-Singh.jpg'},
+  {id: 3, name: 'Liberal Party', Leadername: 'Justin Trudeau', Image_Url: 'https://i.ibb.co/YpSWTJg/justin-trudeau.jpg'},
+  {id: 4, name: 'Conservative Party', Leadername: 'Andrew Scheer', Image_Url: 'https://i.ibb.co/YBp05Ss/andrew-scheer.jpg'}
   ])
 
 grn = parties[0].id
@@ -81,13 +81,13 @@ topics = Topic.create!([
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
   bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
   ",
-  photo_url: "https://i.ibb.co/74f0L8w/cannabis.jpg"
+  photo_url: "https://i.ibb.co/gJQczGX/carbon-tax.jpg"
   },
   {name: "Subsidized Housing", description: "At every opportunity, they've told evangelical Christians that Democrats disrespect their values and dislike their Church, while suggesting to the rest of the country that religious Americans care only about issues like abortion and gay marriage; school prayer and intelligent design. He simply says to everyone in the room, I am here because of Ashley. But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression. They have killed people of different faiths - more than any other, they have killed Muslims.",
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
   bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
   ",
-  photo_url: "https://i.ibb.co/74f0L8w/cannabis.jpg"
+  photo_url: "https://i.ibb.co/7kv2j3X/housing.jpg"
   },
   {name: "Proportional Representation", description: "Take five, punch the tree, and come back in here with a clear head baseline the procedure and samepage your department, yet run it up the flag pole and driving the initiative forward or when does this sunset? . Synergestic actionables this proposal is a win-win situation which will cause a stellar paradigm shift, and produce a multi-fold increase in deliverables let's schedule a standup during the sprint to review our kpis.",
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
