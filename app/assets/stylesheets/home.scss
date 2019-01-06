@@ -108,6 +108,10 @@ P {
   border-bottom: 1px solid $light-grey;
 }
 
+.row {
+  padding-top: 1em;
+}
+
 /*  ================ COLUMN SETUP ================ */
 
 .col {
@@ -368,6 +372,12 @@ button.btn.btn-primary {
   width: 100%;
   position: absolute;
   padding: 2em;
+}
+
+@media (max-width: 575px) {
+  .admin-div {
+    position: initial;
+  }
 }
 
 iframe#twitter-widget-1 {

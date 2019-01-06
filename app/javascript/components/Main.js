@@ -8,6 +8,7 @@ import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
 import App from './_app.js';
+import Footer from './_footer.js.jsx';
 
 
 class Main extends Component {
@@ -51,17 +52,7 @@ class Main extends Component {
                 <TopicsPage {...routerProps} topics={this.state.topics}/> } />
 
             </Switch>
-            <div className="admin-div">
-              <div>
-                <a href="/admin" className="admin-link">Admin</a>
-              </div>
-              <div className="social-media">
-                <i className="fab fa-facebook-f"></i>
-                <i className="fab fa-linkedin-in"></i>
-                <i className="fab fa-twitter"></i>
-                <i className="fab fa-github"></i>
-              </div>
-            </div>
+            <Footer />
             <MediaQuery maxWidth={575}>
               <footer className="mobile-footer">
                 <div className="home-icon">
