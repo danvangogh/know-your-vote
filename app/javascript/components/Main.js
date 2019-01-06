@@ -72,7 +72,7 @@ class Main extends Component {
                 <p className="split-one">|</p>
                 <div className="topic-icon">
                   <Link to="/currentTopics">
-                    <i class="far fa-comment-alt"></i>
+                    <i className="far fa-comment"></i>
                   </Link>
                 </div>
                 <p className="split-two">|</p>
