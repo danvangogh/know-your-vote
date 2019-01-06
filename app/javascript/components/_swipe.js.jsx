@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Swipeable from "react-swipy";
-import Card from './Card';
 
 const appStyles = {
   height: "100%",
