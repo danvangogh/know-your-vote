@@ -95,9 +95,20 @@ topics = Topic.create!([
   ",
   photo_url: "https://i.ibb.co/D45Zrnd/prop-rep.jpg"
   },
-  {name: "Prince Eric's Hair", description: "Somewhere there's a girl, Who's like the shimmer of the wind upon the water, somewhere there's a girl, Who's like the glimmer of the sunlight on the sea, Somewhere there's a girl, Who's like a swell of endless music, Somewhere she is singing, And her song is meant for me.",
-  good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
-  bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
+  {name: "N.A.F.T.A.", description: "The North American Free Trade agreement was created in 1994 to increase trade between Canada, the United States, and Mexico, as well as to make these countries more competitive in the global market. This was accomplished by gradually eliminating most tariffs on products traded between the three countries, and by focusing on agriculture, textiles, automobile manufacturing, and protecting intellectual property. Economists largely agree that the agreement has successfully accomplished these goals.
+
+  Recently, NAFTA was renegotiated and signed by Prime Minister Justin Trudeau, American President Donald Trump, and Mexican President Enrique Pena Nieto. The new agreement brought in several changes, notably in the auto, prescription drug, and dairy industries, with regards to safety inspections, and protecting intellectual property. Trudeau has been both praised and criticized for what Canada gets out of the deal.
+
+  \"Just this week, Mr. Singh called for the Liberals not to sign the agreement until the Trump administration has lifted its unfair and illegal tariffs against Canadian steel and aluminum sectors, a call supported by many in the labour movement,\" Andrew Scheer has also disapproved of the deal, tweeting “The US are measuring their victory by what they gained. We are measuring ourw by what we didn’t give up. Would I have signed this deal? I would have signed a better one.” Elizabeth May actually called for NAFTA to be renegotiated back in 2006, because she felt it worked for the US and not for Canada.
+  ",
+  good: "Trudeau - \“The new North American Free Trade Agreement maintains stability for Canada’s entire economy, stability that’s essential for the millions of jobs and millions of middle-class families that rely on strong trading relationships with our closest neighbours.\”
+  Jerry Dias, national president of Unifor - \“(Canadian auto workers) should be absolutely thrilled. I think it’s fair to say that the auto industry in Canada is alive and well and will be thriving for generations to come. So I am quite pleased this morning with what we were able to accomplish at the bargaining table.\”
+  ",
+  bad: "David Wiens, vice-president of the Dairy Farmers of Canada - “It’s been very, very disappointing they have agreed to it. It’s a big win for the U.S. and well, for Canada, it’s a loss.”
+  \n
+  Scheer - “The US are measuring their victory by what they gained. We are measuring ourw by what we didn’t give up. Would I have signed this deal? I would have signed a better one.”
+  \n
+  Singh - \"Canadians were looking for a better deal, and instead, we seem to be getting a new name, but a worse deal.\"
   ",
   photo_url: "https://i.ibb.co/LRVFFDm/eric.jpg"
   },
