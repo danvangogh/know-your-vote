@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Parallax } from "react-parallax";
 
 class App extends React.Component {
   state = {
@@ -38,9 +39,9 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
-        <div className="imgbox">
-          <div className="bg"><img src="https://i.ibb.co/LkqbLJR/canadian-flag.jpg"/></div>
-        </div>
+      <Parallax bgImage="https://i.ibb.co/KxnwLgs/canadian-flag.jpg" strength={500}>
+        <div style={{ height: 500 }} className="bg"></div>
+      </Parallax>
         <div className="about">
           <h3>About</h3>
           <p>

@@ -81,7 +81,7 @@ topics = Topic.create!([
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
   bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
   ",
-  photo_url: "https://i.ibb.co/gJQczGX/carbon-tax.jpg"
+  photo_url: "https://i.ibb.co/WvzCbgJ/carbon-tax.jpg"
   },
   {name: "Subsidized Housing", description: "At every opportunity, they've told evangelical Christians that Democrats disrespect their values and dislike their Church, while suggesting to the rest of the country that religious Americans care only about issues like abortion and gay marriage; school prayer and intelligent design. He simply says to everyone in the room, I am here because of Ashley. But I will also renew the tough, direct diplomacy that can prevent Iran from obtaining nuclear weapons and curb Russian aggression. They have killed people of different faiths - more than any other, they have killed Muslims.",
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
@@ -93,7 +93,7 @@ topics = Topic.create!([
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
   bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
   ",
-  photo_url: "https://i.ibb.co/D45Zrnd/prop-rep.jpg"
+  photo_url: "https://i.ibb.co/wcyrp8b/prop-rep.jpg"
   },
   {name: "Prince Eric's Hair", description: "Somewhere there's a girl, Who's like the shimmer of the wind upon the water, somewhere there's a girl, Who's like the glimmer of the sunlight on the sea, Somewhere there's a girl, Who's like a swell of endless music, Somewhere she is singing, And her song is meant for me.",
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",

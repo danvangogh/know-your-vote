@@ -3,6 +3,8 @@ import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Tabs from './Tabs';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Parallax } from "react-parallax";
+
 
 class TopicPage extends Component {
   constructor(props){
@@ -35,9 +37,9 @@ class TopicPage extends Component {
     return (
       <div>
         <MediaQuery maxWidth={575}>
-          <div className="imgbox">
-            <img className="topic-img"src={photo_url}/>
-          </div>
+          <Parallax bgImage={photo_url} strength={500}>
+            <div style={{ height: '700px' }}></div>
+          </Parallax>
           <div>
             <h2 className="heading">{name}</h2>
             <Tabs>
@@ -65,33 +67,31 @@ class TopicPage extends Component {
           </div>
         </MediaQuery>
         <MediaQuery minWidth={576}>
-          <div className="container">
-            <div className="imgbox">
-              <img src={photo_url}/>
+          <Parallax bgImage={photo_url} strength={500}>
+            <div style={{ height: 500 }}></div>
+          </Parallax>
+          <h2 className="heading">{name}</h2>
+          <div className="row">
+            <div className="col-8">
+              <h3>FACT</h3>
+              <br />
+              <h3>THE &lsquo;WHAT&rsquo;</h3>
+              <p>{description}</p>
+              <h4>THE &lsquo;GOOD&rsquo;</h4>
+              <p>{good}</p>
+              <h4>THE &lsquo;BAD&rsquo;</h4>
+              <p>{bad}</p>
             </div>
-            <h2 className="heading">{name}</h2>
-            <div className="row">
-              <div className="col-8">
-                <h3>FACT</h3>
-                <br />
-                <h3>THE &lsquo;WHAT&rsquo;</h3>
-                <p>{description}</p>
-                <h4>THE &lsquo;GOOD&rsquo;</h4>
-                <p>{good}</p>
-                <h4>THE &lsquo;BAD&rsquo;</h4>
-                <p>{bad}</p>
-              </div>
-              <div className="col-4">
-                <h3>OPINIONS</h3>
-                <div className="card">
-                  <blockquote className="blockquote mb-0">
-                    <div className="centerContent">
-                      <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="URL" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" />
-                      </div>
+            <div className="col-4">
+              <h3>OPINIONS</h3>
+              <div className="card">
+                <blockquote className="blockquote mb-0">
+                  <div className="centerContent">
+                    <div className="selfCenter standardWidth">
+                      <TwitterTimelineEmbed  sourceType="URL" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
                     </div>
-                  </blockquote>
-                </div>
+                  </div>
+                </blockquote>
               </div>
             </div>
           </div>
