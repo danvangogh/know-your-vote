@@ -37,8 +37,8 @@ class TopicPage extends Component {
     return (
       <div>
         <MediaQuery maxWidth={575}>
-          <Parallax bgImage={photo_url} strength={500}>
-            <div style={{ height: '700px' }}></div>
+          <Parallax bgImage={photo_url} strength={500} bgWidth={ 1200 }>
+            <div style={{ height: 700 }}></div>
           </Parallax>
           <div>
             <h2 className="heading">{name}</h2>
