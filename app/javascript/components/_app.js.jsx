@@ -20,11 +20,8 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('/topics')
       .then((response) => {
-        console.log("data:", response.data);
         this.setState({
           topics: response.data
-        }, () => {
-          console.log(this.state)
         })
       })
       .catch(function (error) {
@@ -39,7 +36,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
-      <Parallax bgImage="https://i.ibb.co/KxnwLgs/canadian-flag.jpg" strength={500}>
+      <Parallax bgImage="https://i.ibb.co/KxnwLgs/canadian-flag.jpg" strength={500} bgWidth={2000}>
         <div style={{ height: 500 }} className="bg"></div>
       </Parallax>
         <div className="about">

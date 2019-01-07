@@ -24,10 +24,7 @@ class Main extends Component {
   componentDidMount() {
     axios.get('/topics')
       .then((response) => {
-        console.log("data:", response.data);
-        this.setState({ topics: response.data }, () => {
-          console.log(this.state)
-        }).bind(this)
+        this.setState({ topics: response.data}).bind(this)
       })
       .catch(function (error) {
         return error;
