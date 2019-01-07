@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20190105225112) do
     t.index ["party_id"], name: "index_quotes_on_party_id"
   end
 
+  create_table "results", force: :cascade do |t|
+    t.integer "grn"
+    t.integer "ndp"
+    t.integer "lib"
+    t.integer "cp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -40,15 +49,6 @@ ActiveRecord::Schema.define(version: 20190105225112) do
     t.datetime "updated_at", null: false
     t.string "photo_url"
     t.string "twitter_url"
-  end
-
-  create_table "results", force: :cascade do |t|
-    t.integer "grn"
-    t.integer "ndp"
-    t.integer "lib"
-    t.integer "cp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "quotes", "parties"
