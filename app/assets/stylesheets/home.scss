@@ -64,7 +64,7 @@ img {
 
 .topic-img {
   width: 100%;
-  padding-bottom: 2em;
+  // padding-bottom: 2em;
 }
 
 /*  ================ ABOUT PAGE ================ */
@@ -90,7 +90,7 @@ img {
 
 /*  ================ TOPICS PAGE ================ */
 
-.container {
+.topic-container {
   width: 100%;
   padding-right: 0;
   padding-left: 0;
@@ -100,6 +100,7 @@ img {
   border-bottom: 1px solid $light-grey;
   letter-spacing: .02em;
   font-family: $body-font;
+  padding-top: 1em;
 }
 
 P {
@@ -112,10 +113,36 @@ P {
   border-top: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
   color: whitesmoke;
+  position: sticky;
+  top: 40%;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.parallax-img {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 200px;
 }
 
 .row {
   padding-top: 1em;
+}
+
+.topic-img {
+  filter: brightness(70%);
+}
+
+.mobile-heading {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+  top: 50%;
+  color: whitesmoke;
+  letter-spacing: 0.07em;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 /*  ================ COLUMN SETUP ================ */

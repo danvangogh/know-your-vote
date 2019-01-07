@@ -34,11 +34,12 @@ class TopicPage extends Component {
     return (
       <div>
         <MediaQuery maxWidth={575}>
-          <Parallax bgImage={photo_url} strength={500} bgWidth={2000}>
-            <div className="parallax-img" style={{ height: 200 }}>
-              <h2 className="heading">{name}</h2>
+          <div className="imgbox">
+            <div className="topic-img-div">
+              <span className="mobile-heading">{name}</span>
+              <img src={photo_url} className="topic-img"/>
             </div>
-          </Parallax>
+          </div>
           <div>
             <Tabs>
               <div label="FACT">
@@ -70,7 +71,7 @@ class TopicPage extends Component {
               <h2 className="heading">{name}</h2>
             </div>
           </Parallax>
-          <div className="container">
+          <div className="topic-container">
             <div className="row">
               <div className="col-8">
                 <h3>FACT</h3>
