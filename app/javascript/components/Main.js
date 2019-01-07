@@ -9,7 +9,7 @@ import MediaQuery from 'react-responsive';
 import Admin from './Admin.js';
 import App from './_app.js';
 import Footer from './_footer.js.jsx';
-
+import CompareResults from './_CompareResults.js'
 
 class Main extends Component {
   constructor(props){

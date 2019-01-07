@@ -89,7 +89,7 @@
 	justify-items: center;
 	grid-template-areas:
 	"start a a a a a a end"
-  ". b b b b b b ."
+      ". b b b b b b ."
 	;
   grid-row-gap: .5em;
   grid-template-rows: 24em 8em;
@@ -160,4 +160,27 @@
 
 .whole-card {
   display: inline-table;
+}
+
+.comparisonButton {
+  margin-top: 1em;
+	box-shadow: 0px 3px 20px -10px #000405;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius:20px;
+	border-radius:20px;
+	display:inline-block;
+	color:#666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:0.5em, 1.5em;
+	text-decoration:none;
+}
+.comparisonButton:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+
+}
+.comparisonButton:active {
+	position:relative;
+	top:1px;
 }

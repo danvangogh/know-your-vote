@@ -21,8 +21,8 @@ class Admin::TopicsController < ApplicationController
   end
 
   def destroy
-    @topics = Topic.find(params[:id])
-    @topics.destroy
+    @topic = Topic.find(params[:id])
+    @topic.destroy
   end
 
   private

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cards from "./_Cards.js.jsx";
 import ResultsCard from './_ResultsCard.js.jsx'
+import axios from 'axios'
 
 class Game extends Component {
   constructor(props){
@@ -38,11 +39,27 @@ class Game extends Component {
     });
   }
 
+  resultsPost(scores) {
+    axios.post('/results', {
+      grn: scores[1],
+      ndp: scores[2],
+      lib: scores[3],
+      cp: scores[4]
+    })
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
   render() {
     const isDonePlay = this.state.question;
     let card;
 
-    if (isDonePlay >= 10) {
+    if (isDonePlay == 12) {
+      {this.resultsPost(this.state.scores)}
       card = <div>
               <ResultsCard count={this.state.scores} />
             </div>
