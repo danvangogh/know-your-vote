@@ -30,11 +30,14 @@ class TopicPage extends Component {
     if (!this.state.topic) {
       return <p>Loading...</p>
     }
-    let {description, good, bad, name} = this.state.topic;
+    let {description, good, bad, name, photo_url} = this.state.topic;
 
     return (
       <div>
         <MediaQuery maxWidth={575}>
+          <div className="imgbox">
+            <img className="topic-img"src={photo_url}/>
+          </div>
           <div>
             <h2 className="heading">{name}</h2>
             <Tabs>
@@ -52,7 +55,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
+                        <TwitterTimelineEmbed  sourceType="URL" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
                       </div>
                     </div>
                   </blockquote>
@@ -63,6 +66,9 @@ class TopicPage extends Component {
         </MediaQuery>
         <MediaQuery minWidth={576}>
           <div className="container">
+            <div className="imgbox">
+              <img src={photo_url}/>
+            </div>
             <h2 className="heading">{name}</h2>
             <div className="row">
               <div className="col-8">
@@ -81,7 +87,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" />
+                        <TwitterTimelineEmbed  sourceType="URL" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" />
                       </div>
                     </div>
                   </blockquote>
