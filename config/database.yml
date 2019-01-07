@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: 'postgres://yplhhkcm:9bjMzkz9icMZR2vDcrW1VVrUXvm3CeA0@baasu.db.elephantsql.com:5432/yplhhkcm'
+  url: <%= ENV['DATABASE_URL'] %>
