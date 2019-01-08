@@ -48,19 +48,14 @@ class App extends React.Component {
           </div>
         </MediaQuery>
           <div className="about">
-            <h3>About</h3>
+            <h2>About</h2>
+            <br/>
             <p>
-              We help educate voters on the key topics in the upcoming election. A better informed voter means better informed voting and decision making, with the ambitious aim to improve our nation.
-              <br/>
-              THE ‘WHAT’
-              <b/>
-              Bacon ipsum dolor amet brisket cupim picanha shank andouille pork loin. Picanha ham chicken, landjaeger kielbasa drumstick pig chuck rump prosciutto meatloaf beef ribs pork loin venison. Pork brisket short loin strip steak, swine pork chop spare ribs bresaola pancetta filet mignon andouille ground round kielbasa hamburger picanha. Beef ribs tenderloin bresaola, sausage buffalo pig cupim biltong meatloaf fatback turkey cow turducken swine.
-              <br/>
-              THE ‘GOOD’
-              People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.
-              <br/>
-              THE ‘BAD’
-              Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
+              Politics are confusing, but voting doesn't have to be.
+            </p>
+            <hr className="half-line" />
+            <p>
+              Here at KnowYourVote, we believe in facts over opinion. By providing a factual, un-biased look at the current issues in Canada, KnowYourVote aims to inform. The better informed a nation is with its potential leaders and their platforms, the better the chances are for accurate representation of the people's desires for the nation. This site is still in development, so citations and further depth of information is yet to come.
             </p>
           </div>
         </div>
