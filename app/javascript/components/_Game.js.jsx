@@ -39,27 +39,29 @@ class Game extends Component {
     });
   }
 
-  resultsPost(scores) {
-    axios.post('/results', {
-      grn: scores[1],
-      ndp: scores[2],
-      lib: scores[3],
-      cp: scores[4]
-    })
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  duplicates(newArr) {
+    newArr.sort(function(a, b){return b - a})
+    if (newArr[0] == newArr[1]) {
+      return true;
+    }
   }
+
+  tieCheck(obj) {
+    let arr = []
+    for (let num in obj) {
+      arr = Object.values(obj)
+    }
+    if (this.duplicates(arr)) {
+      return true;
+    }
+  }
+
 
   render() {
     const isDonePlay = this.state.question;
     let card;
 
-    if (isDonePlay == 12) {
-      {this.resultsPost(this.state.scores)}
+    if (isDonePlay >= 4 && !this.tieCheck(this.state.scores)) {
       card = <div>
               <ResultsCard count={this.state.scores} />
             </div>
