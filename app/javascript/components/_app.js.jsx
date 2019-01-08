@@ -38,7 +38,7 @@ class App extends React.Component {
     return(
       <div className="App">
         <MediaQuery minWidth={576}>
-          <Parallax bgImage="https://i.ibb.co/KxnwLgs/canadian-flag.jpg" strength={500} bgWidth={2200}>
+          <Parallax bgImage="https://i.ibb.co/KxnwLgs/canadian-flag.jpg" strength={500}>
             <div style={{ height: 500 }} className="bg"></div>
           </Parallax>
         </MediaQuery>
