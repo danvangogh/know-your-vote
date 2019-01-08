@@ -28,8 +28,9 @@ class Cards extends Component {
       return <p>Loading...</p>
     }
     const { question } = this.props;
+    const index = question - 1;
     const qLength = this.state.quotes.length;
-    const randomQuote = this.state.quotes[question];
+    const randomQuote = this.state.quotes[index];
     console.log("Questionnnn: ", question)
     return (
       <div className="whole-card">

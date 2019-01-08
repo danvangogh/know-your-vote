@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import { Bar, Line, Radar } from 'react-chartjs-2';
 import ScoreGraph from './_ScoreGraph.js'
+import Modal from 'react-responsive-modal';
 
 class CompareResults extends Component {
   constructor(props) {
@@ -11,7 +13,8 @@ class CompareResults extends Component {
       grnRes: [],
       ndpRes: [],
       libRes: [],
-      cpRes: []
+      cpRes: [],
+      open: true
     }
   }
 
@@ -35,8 +38,11 @@ class CompareResults extends Component {
       libRes.push(party.lib)
       cpRes.push(party.cp)
     })
-
   }
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
 
   average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
@@ -118,16 +124,11 @@ class CompareResults extends Component {
         <section className="results-card">
           <div className="mobile-modal-body">
             <div className="announcement">
-              <h4>See how you compare...</h4>
+              <h4>SEE HOW YOU COMPARE</h4>
             </div>
-            <div className="matched-with">
+            <div className="compareGraph">
               <Line data={data} />
             </div>
-
-            <span className="leader-result quotearea">
-            <h4>Take the test again</h4>
-            </span>
-
           </div>
         </section>
       </div>

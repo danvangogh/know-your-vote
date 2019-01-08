@@ -30,6 +30,7 @@ class Game extends Component {
       return {scores: newScores, question: newQuestion};
     });
   }
+
   leftSwipe(voted_party_id) {
     this.setState(({scores, question}) => {
       let newScores = {...scores};
@@ -45,7 +46,7 @@ class Game extends Component {
       return true;
     }
   }
-
+  
   tieCheck(obj) {
     let arr = []
     for (let num in obj) {
@@ -56,12 +57,11 @@ class Game extends Component {
     }
   }
 
-
   render() {
     const isDonePlay = this.state.question;
     let card;
 
-    if (isDonePlay >= 4 && !this.tieCheck(this.state.scores)) {
+    if (isDonePlay >= 10 && !this.tieCheck(this.state.scores)) {
       card = <div>
               <ResultsCard count={this.state.scores} />
             </div>

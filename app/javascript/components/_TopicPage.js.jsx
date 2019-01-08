@@ -13,7 +13,7 @@ class TopicPage extends Component {
   state = {
     topic: null
   };
-  
+
   componentDidMount() {
     const id = this.props.match.params.id;
     axios.get(`/topics/${id}`)
@@ -46,9 +46,9 @@ class TopicPage extends Component {
                 <br />
                 <h3>THE &lsquo;WHAT&rsquo;</h3>
                 <p>{description}</p>
-                <h4>THE &lsquo;GOOD&rsquo;</h4>
+                <h4>IN FAVOUR</h4>
                 <p>{good}</p>
-                <h4>THE &lsquo;BAD&rsquo;</h4>
+                <h4>NOT IN FAVOUR...</h4>
                 <p>{bad}</p>
               </div>
               <div label="OPINIONS">
@@ -78,9 +78,9 @@ class TopicPage extends Component {
                 <br />
                 <h3>THE &lsquo;WHAT&rsquo;</h3>
                 <p>{description}</p>
-                <h4>THE &lsquo;GOOD&rsquo;</h4>
+                <h4>IN FAVOUR...</h4>
                 <p>{good}</p>
-                <h4>THE &lsquo;BAD&rsquo;</h4>
+                <h4>NOT IN FAVOUR...</h4>
                 <p>{bad}</p>
               </div>
               <div className="col-4">
@@ -104,4 +104,3 @@ class TopicPage extends Component {
 }
 
 export default TopicPage;
-

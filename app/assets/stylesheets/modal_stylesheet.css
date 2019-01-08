@@ -62,3 +62,13 @@
   color: white;
   grid-area: e;
 }
+
+.compareGraph {
+  display: grid;
+  margin-top: 2em;
+  padding: 1em 2em;
+}
+
+.outbound {
+  margin-top: 4em;
+}
