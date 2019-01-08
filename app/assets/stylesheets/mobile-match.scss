@@ -96,13 +96,33 @@
 }
 
 .mobile-modal-body {
-  background: rgb(195,185,34);
-  background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
+  background: rgb(211,49,231);
+  background: linear-gradient(340deg, rgba(211,49,231,0.9780287114845938) 0%, rgba(0,245,255,0.958420868347339) 100%);
   padding-bottom: 2em;
   border-radius: 20px;
   margin: 10px;
   box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
   height: 70vh;
+}
+
+.cp-gradient {
+  background: rgb(45,204,255);
+  background: linear-gradient(354deg, rgba(45,204,255,0.9023984593837535) 0%, rgba(21,0,255,0.9023984593837535) 100%);
+}
+
+.grn-gradient {
+  background: rgb(211,231,49);
+  background: linear-gradient(354deg, rgba(211,231,49,0.9023984593837535) 0%, rgba(5,136,4,0.9472163865546218) 100%);
+}
+
+.lib-gradient {
+  background: rgb(231,49,141);
+  background: linear-gradient(354deg, rgba(231,49,141,0.7763480392156863) 0%, rgba(255,10,10,0.9360119047619048) 100%);
+}
+
+.ndp-gradient {
+  background: rgb(231,49,49);
+  background: linear-gradient(354deg, rgba(231,49,49,0.8015581232492998) 0%, rgba(255,154,0,0.7651435574229692) 100%);
 }
 
 .quote {
