@@ -131,7 +131,6 @@ topics = Topic.create!([
   photo_url: "https://i.ibb.co/fXdh315/prop-rep-2.jpg",
   twitter_url: "https://twitter.com/rachwongrw/timelines/1082145178469556224"
   },
-
   {name: "NAFTA",
   description: "The North American Free Trade agreement was created in 1994 to increase trade between Canada, the United States, and Mexico, as well as to make these countries more competitive in the global market. This was accomplished by gradually eliminating most tariffs on products traded between the three countries, and by focusing on agriculture, textiles, automobile manufacturing, and protecting intellectual property. Economists largely agree that the agreement has successfully accomplished these goals.
 
