@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 
 import NavBar from './_navbar.js';
@@ -37,14 +37,28 @@ class Admin extends Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          <NavBar />
-          <TopicForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
-          <DeleteTopic parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
-          <QuoteForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+      <div>
+        <Router>
+          <div>
+            <NavBar />
+            <TopicForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+            <DeleteTopic parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+            <QuoteForm parties={this.state.parties} topics={this.state.topics} quotes={this.state.quotes}/>
+          </div>
+        </Router>
+        <div className="line"></div>
+        <div className="admin-div">
+          <div>
+            <a href="/"><i className="fas fa-home admin-home"></i></a>
+          </div>
+          <div className="social-media">
+            <a href="https://www.facebook.com/knowyourvotecanada/"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/"><i className="fab fa-twitter"></i></a>
+            <a href="https://github.com/danvangogh/know-your-vote"><i className="fab fa-github"></i></a>
+          </div>
         </div>
-      </Router>
+      </div>
     )
   }
 }

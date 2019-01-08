@@ -89,7 +89,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url}/>
+                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url} data-height="300"/>
                       </div>
                     </div>
                   </blockquote>

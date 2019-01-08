@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Bar, Line, Radar } from 'react-chartjs-2';
-import ScoreGraph from './_ScoreGraph.js'
 
 class CompareResults extends Component {
   constructor(props) {

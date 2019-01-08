@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { BrowserRouter as Route } from 'react-router-dom';
 import TopicsPage from './_TopicsPage.js'
 
 class DeleteTopic extends Component {

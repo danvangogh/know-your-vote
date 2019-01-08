@@ -78,10 +78,14 @@ img {
   letter-spacing: .02em;
 }
 
+
+/*  ================ FOOTER ================ */
+
 .social-media {
   justify-content: flex-start;
   margin-left: auto;
-  .fa-facebook-f, .fa-github, .fa-linkedin-in, .fa-twitter {
+  z-index: -1;
+  .fa-facebook-f, .fa-github, .fa-linkedin-in, .fa-twitter, .fa-home {
     padding: 0 15px;
     align-items: center;
     color: #9ea0a6;
@@ -92,15 +96,12 @@ img {
 
 .topic-container {
   width: 100%;
-  padding-right: 0;
-  padding-left: 0;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 1em;
+  padding: 1em 2.5em;
   border-bottom: 1px solid $light-grey;
   letter-spacing: .02em;
   font-family: $body-font;
-  padding-top: 1em;
 }
 
 P {
@@ -143,6 +144,7 @@ P {
   position: relative;
   width: 100%;
   text-align: center;
+  margin-top: -36px;
 }
 
 /*  ================ COLUMN SETUP ================ */
@@ -374,7 +376,19 @@ form {
   select#exampleFormControlSelect1 {
     width: 100%;
   }
+  form {
+    padding: 2em;
+  }
 }
+
+.admin-home {
+  color: #9ea0a6;
+}
+
+.line {
+  border-bottom: 2px solid $light-grey;
+  margin: 0 2em;
+ }
 
 @media (min-width: 576px) {
   select#exampleFormControlSelect1 {

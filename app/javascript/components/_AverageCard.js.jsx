@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import ScoreGraph from './_ScoreGraph.js'
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import ScoreGraph from './_ScoreGraph.js';
 
 class ResultsCard extends Component {
   constructor(props){
