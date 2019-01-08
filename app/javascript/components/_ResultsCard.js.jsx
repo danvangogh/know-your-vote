@@ -16,6 +16,21 @@ class ResultsCard extends Component {
     this.showCompare = this.showCompare.bind(this);
   }
 
+  resultsPost(scores) {
+    axios.post('/results', {
+      grn: scores[1],
+      ndp: scores[2],
+      lib: scores[3],
+      cp: scores[4]
+    })
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
   componentDidMount() {
     let resultsNum = this.props.count;
     let myMatch = Object.keys(resultsNum).reduce((a, b) => resultsNum[a] > resultsNum[b] ? a : b);
@@ -30,6 +45,7 @@ class ResultsCard extends Component {
     .catch(function (error) {
       return error;
     });
+    this.resultsPost(resultsNum)
   }
 
   showCompare() {
