@@ -112,6 +112,7 @@ img {
   border-bottom: 1px solid $light-grey;
   letter-spacing: .02em;
   font-family: $body-font;
+  height: auto;
 }
 
 P {
@@ -137,7 +138,6 @@ P {
 
 .parallax-img {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 200px;
 }
 
 .row {
@@ -146,6 +146,13 @@ P {
 
 .topic-img {
   filter: brightness(70%);
+}
+
+.img-responsive {
+  filter: brightness(80%);
+  &:hover {
+    filter: brightness(100%);
+  }
 }
 
 .mobile-heading {
@@ -160,6 +167,10 @@ P {
   width: 100%;
   text-align: center;
   margin-top: -36px;
+}
+
+.selfCenter {
+  height: 100vh;
 }
 
 /*  ================ COLUMN SETUP ================ */
@@ -219,11 +230,11 @@ P {
     top: 50%;
     left: 50%;
     padding: 0 6px;
-    background: rgba(0, 0, 0, 0.1);
     transform: translate(-50%, -50%);
     text-shadow: 0 1px 0 black;
     letter-spacing: 0.05em;
     color: whitesmoke;
+    z-index: 1;
   }
 
 
@@ -233,6 +244,7 @@ P {
 
   &:hover {
     opacity: 1;
+    filter: brightness(100%);
   }
 }
 

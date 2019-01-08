@@ -66,7 +66,7 @@ class TopicPage extends Component {
           </div>
         </MediaQuery>
         <MediaQuery minWidth={576}>
-          <Parallax bgImage={photo_url} strength={500}>
+          <Parallax bgImage={photo_url} bgWidth={'1600px'} strength={500}>
             <div className="parallax-img" style={{ height: 500 }}>
               <h2 className="heading">{name}</h2>
             </div>
@@ -88,8 +88,8 @@ class TopicPage extends Component {
                 <div className="card">
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
-                      <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url} options={{height: 450}}/>
+                      <div className="selfCenter standardWidth" >
+                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url} autoHeight/>
                       </div>
                     </div>
                   </blockquote>

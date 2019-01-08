@@ -102,7 +102,7 @@ topics = Topic.create!([
   good: "People don't expect government to solve all their problems. They stood on the Edmund Pettus Bridge, as the blows of billy clubs rained down. There was even a time when the Christian Coalition determined that its number one legislative priority was tax cuts for the rich. But we can only achieve it together.",
   bad: "Louis, and thousands more like her, who has the grades, has the drive, has the will, but doesn't have the money to go to college. But we cannot walk away this time. These challenges are not all of government's making.
   ",
-  photo_url: "https://i.ibb.co/wcyrp8b/prop-rep.jpg",
+  photo_url: "https://i.ibb.co/fXdh315/prop-rep-2.jpg",
   twitter_url: "https://twitter.com/rachwongrw/timelines/1082145178469556224"
   },
   {name: "NAFTA",
