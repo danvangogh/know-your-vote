@@ -65,7 +65,7 @@ class Game extends Component {
             </div>
     } else {
       card = <div>
-              <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} />
+              <Cards rightSwipe={this.rightSwipe} leftSwipe={this.leftSwipe} question = {this.state.question}/>
             </div>
     }
     return (
