@@ -23,26 +23,15 @@ class Cards extends Component {
     });
   }
 
-  quotesText = arr => {
-    const textArr = [];
-    arr.forEach(function(quote) {
-      textArr.push(quote.text)
-    })
-    return textArr;
-  }
-
-  generateRandom = (min, max) => {
-    const x = Math.random() * (max - min) + min;
-    return Math.round(x)
-  }
-
   render() {
     if (this.state.quotes.length === 0) {
       return <p>Loading...</p>
     }
-    const qLength = this.state.quotes.length
-    const quoteIndex = this.generateRandom(0, qLength - 1)
-    const randomQuote = this.state.quotes[quoteIndex];
+    const { question } = this.props;
+    const index = question - 1;
+    const qLength = this.state.quotes.length;
+    const randomQuote = this.state.quotes[index];
+    console.log("Questionnnn: ", question)
     return (
       <div className="whole-card">
         <Swipeable buttons={({ right, left }) => (
