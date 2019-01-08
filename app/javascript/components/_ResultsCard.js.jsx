@@ -100,7 +100,7 @@ class ResultsCard extends Component {
                   <button
                     type="button"
                     className="comparisonButton"
-                    onClick={this.showCompare}>See how I compare...</button>
+                    onClick={this.showCompare}>See how you compare...</button>
                 </div>
               </div>
             </div>
