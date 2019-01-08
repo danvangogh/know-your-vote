@@ -49,7 +49,7 @@ class Admin extends Component {
         <div className="line"></div>
         <div className="admin-div">
           <div>
-            <a href="/"><i className="fas fa-home admin-home"></i></a>
+            <a href="/"><i className="far fa-check-square"></i> Know Your Vote</a>
           </div>
           <div className="social-media">
             <a href="https://www.facebook.com/knowyourvotecanada/"><i className="fab fa-facebook-f"></i></a>

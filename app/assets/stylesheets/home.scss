@@ -85,7 +85,7 @@ img {
   justify-content: flex-start;
   margin-left: auto;
   z-index: -1;
-  .fa-facebook-f, .fa-github, .fa-linkedin-in, .fa-twitter, .fa-home {
+  .fa-facebook-f, .fa-github, .fa-linkedin-in, .fa-twitter, .fa-check-square {
     padding: 0 15px;
     align-items: center;
     color: #9ea0a6;
@@ -111,8 +111,6 @@ P {
 .heading {
   text-align: center;
   padding: 0.5em 0em;
-  border-top: 1px solid $light-grey;
-  border-bottom: 1px solid $light-grey;
   color: whitesmoke;
   position: sticky;
   top: 40%;
@@ -379,10 +377,6 @@ form {
   form {
     padding: 2em;
   }
-}
-
-.admin-home {
-  color: #9ea0a6;
 }
 
 .line {
