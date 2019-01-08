@@ -58,11 +58,26 @@ class ResultsCard extends Component {
       return <p>Loading...</p>
     }
 
+    let gradientClass = "mobile-modal-body";
+
+    if (this.state.parties.id == 1) {
+      gradientClass += " grn-gradient"
+    }
+    else if (this.state.parties.id == 2) {
+      gradientClass += " ndp-gradient"
+    }
+    else if (this.state.parties.id == 3) {
+      gradientClass += " lib-gradient"
+    }
+    else if (this.state.parties.id == 4) {
+      gradientClass += " cp-gradient"
+    }
+
     if (!this.state.renderCompare) {
       return (
         <div>
           <section className="results-card">
-            <div className="mobile-modal-body">
+            <div className={gradientClass}>
                 <div className="announcement">
                   <h4>You Matched With...</h4>
                 </div>
