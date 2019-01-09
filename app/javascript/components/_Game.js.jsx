@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cards from "./_Cards.js.jsx";
-import ResultsCard from './_ResultsCard.js.jsx'
-import axios from 'axios'
+import ResultsCard from './_ResultsCard.js.jsx';
 
 class Game extends Component {
   constructor(props){
