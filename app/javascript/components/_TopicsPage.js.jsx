@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 function TopicsPage({ topics }) {
   return (
     <div className="current-topics">
-      <h2 className="all-topics">Current Topics</h2>
+      <div className="all-topics">
+        <h2>Current Topics</h2>
+        <p className="instructions">Pick a topic from below to read more...</p>
+      </div>
       <div className="topics">
         <div className="card-deck section group">
           { topics.map((topic) => {

@@ -3,6 +3,8 @@ import axios from 'axios';
 import MediaQuery from 'react-responsive';
 import Tabs from './Tabs';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Parallax } from "react-parallax";
+
 
 class TopicPage extends Component {
   constructor(props){
@@ -11,15 +13,12 @@ class TopicPage extends Component {
   state = {
     topic: null
   };
-  
+
   componentDidMount() {
     const id = this.props.match.params.id;
     axios.get(`/topics/${id}`)
       .then((response) => {
-        console.log('new data:', response.data);
-        this.setState({ topic: response.data }, () => {
-          console.log(this.state)
-        })
+        this.setState({ topic: response.data})
       })
       .catch(function (error) {
         return error;
@@ -30,21 +29,26 @@ class TopicPage extends Component {
     if (!this.state.topic) {
       return <p>Loading...</p>
     }
-    let {description, good, bad, name} = this.state.topic;
+    let {description, good, bad, name, photo_url, twitter_url} = this.state.topic;
 
     return (
       <div>
         <MediaQuery maxWidth={575}>
+          <div className="imgbox">
+            <div className="topic-img-div">
+              <span className="mobile-heading">{name}</span>
+              <img src={photo_url} className="topic-img"/>
+            </div>
+          </div>
           <div>
-            <h2 className="heading">{name}</h2>
             <Tabs>
               <div label="FACT">
                 <br />
                 <h3>THE &lsquo;WHAT&rsquo;</h3>
                 <p>{description}</p>
-                <h4>THE &lsquo;GOOD&rsquo;</h4>
+                <h4>IN FAVOUR</h4>
                 <p>{good}</p>
-                <h4>THE &lsquo;BAD&rsquo;</h4>
+                <h4>NOT IN FAVOUR...</h4>
                 <p>{bad}</p>
               </div>
               <div label="OPINIONS">
@@ -52,7 +56,7 @@ class TopicPage extends Component {
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
                       <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808"/>
+                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url}/>
                       </div>
                     </div>
                   </blockquote>
@@ -62,17 +66,21 @@ class TopicPage extends Component {
           </div>
         </MediaQuery>
         <MediaQuery minWidth={576}>
-          <div className="container">
-            <h2 className="heading">{name}</h2>
+          <Parallax bgImage={photo_url} bgWidth={'1600px'} strength={500}>
+            <div className="parallax-img" style={{ height: 500 }}>
+              <h2 className="heading">{name}</h2>
+            </div>
+          </Parallax>
+          <div className="topic-container">
             <div className="row">
               <div className="col-8">
                 <h3>FACT</h3>
                 <br />
                 <h3>THE &lsquo;WHAT&rsquo;</h3>
                 <p>{description}</p>
-                <h4>THE &lsquo;GOOD&rsquo;</h4>
+                <h4>IN FAVOUR...</h4>
                 <p>{good}</p>
-                <h4>THE &lsquo;BAD&rsquo;</h4>
+                <h4>NOT IN FAVOUR...</h4>
                 <p>{bad}</p>
               </div>
               <div className="col-4">
@@ -80,8 +88,8 @@ class TopicPage extends Component {
                 <div className="card">
                   <blockquote className="blockquote mb-0">
                     <div className="centerContent">
-                      <div className="selfCenter standardWidth">
-                        <TwitterTimelineEmbed  sourceType="url" url="https://twitter.com/rachwongrw/timelines/1080909217102327808" />
+                      <div className="selfCenter standardWidth" >
+                        <TwitterTimelineEmbed  sourceType="URL" url={twitter_url} autoHeight/>
                       </div>
                     </div>
                   </blockquote>
@@ -96,4 +104,3 @@ class TopicPage extends Component {
 }
 
 export default TopicPage;
-

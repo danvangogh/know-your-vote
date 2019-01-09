@@ -7,10 +7,10 @@ function Footer() {
         <a href="/admin" className="admin-link">Admin</a>
       </div>
       <div className="social-media">
-        <i className="fab fa-facebook-f"></i>
-        <i className="fab fa-linkedin-in"></i>
-        <i className="fab fa-twitter"></i>
-        <i className="fab fa-github"></i>
+        <a href="https://www.facebook.com/knowyourvotecanada/"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com"><i className="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/"><i className="fab fa-twitter"></i></a>
+        <a href="https://github.com/danvangogh/know-your-vote"><i className="fab fa-github"></i></a>
       </div>
     </div>
   )

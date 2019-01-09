@@ -10,7 +10,6 @@ import Admin from './Admin.js';
 import App from './_app.js';
 import Footer from './_footer.js.jsx';
 
-
 class Main extends Component {
   constructor(props){
     super(props)
@@ -24,10 +23,7 @@ class Main extends Component {
   componentDidMount() {
     axios.get('/topics')
       .then((response) => {
-        console.log("data:", response.data);
-        this.setState({ topics: response.data }, () => {
-          console.log(this.state)
-        }).bind(this)
+        this.setState({ topics: response.data}).bind(this)
       })
       .catch(function (error) {
         return error;

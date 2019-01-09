@@ -89,20 +89,40 @@
 	justify-items: center;
 	grid-template-areas:
 	"start a a a a a a end"
-  ". b b b b b b ."
+      ". b b b b b b ."
 	;
   grid-row-gap: .5em;
   grid-template-rows: 24em 8em;
 }
 
 .mobile-modal-body {
-  background: rgb(195,185,34);
-  background: linear-gradient(337deg, rgba(195,185,34,1) 0%, rgba(255,21,21,1) 100%);
+  background: rgb(211,49,231);
+  background: linear-gradient(340deg, rgba(211,49,231,1) 0%, rgba(0,245,255,1) 100%);
   padding-bottom: 2em;
   border-radius: 20px;
   margin: 10px;
   box-shadow: 3px 3px 15px -3px rgba(0,0,0,0.75);
   height: 70vh;
+}
+
+.cp-gradient {
+  background: rgb(45,204,255);
+  background: linear-gradient(354deg, rgba(45,204,255,1) 0%, rgba(21,0,255,1) 100%);
+}
+
+.grn-gradient {
+  background: rgb(211,231,49);
+  background: linear-gradient(354deg, rgba(211,231,49,1) 0%, rgba(5,136,4,1) 100%);
+}
+
+.lib-gradient {
+  background: rgb(231,49,141);
+  background: linear-gradient(354deg, rgba(231,49,141,1) 0%, rgba(255,10,10,1) 100%);
+}
+
+.ndp-gradient {
+  background: rgb(255,147,0);
+  background: linear-gradient(156deg, rgba(255,147,0,0.9780287114845938) 0%, rgba(28,28,28,1) 100%);
 }
 
 .quote {
@@ -113,6 +133,10 @@
   align-self: center;
   font-style: italic;
   text-shadow: 1px 1px 8px DarkGrey;
+}
+
+@media (min-width: 320px) {
+  font-size: 1em;
 }
 
 .quotation-left, .quotation-right {
@@ -160,4 +184,27 @@
 
 .whole-card {
   display: inline-table;
+}
+
+.comparisonButton {
+  margin-top: 1em;
+	box-shadow: 0px 3px 20px -10px #000405;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius:20px;
+	border-radius:20px;
+	display:inline-block;
+	color:#666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:0.5em, 1.5em;
+	text-decoration:none;
+}
+.comparisonButton:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+
+}
+.comparisonButton:active {
+	position:relative;
+	top:1px;
 }
