@@ -51,7 +51,7 @@ class App extends React.Component {
             <h2>About</h2>
             <br/>
             <p>
-              Politics are confusing, but voting doesn't have to be.
+              Politics is confusing, but voting doesn't have to be.
             </p>
             <hr className="half-line" />
             <p>
