@@ -35,6 +35,8 @@ class NavBar extends React.Component {
           <Modal open={open} onClose={this.onCloseModal} center>
             <Game />
           </Modal>
+
+          
         </div>
       </div>
     )
