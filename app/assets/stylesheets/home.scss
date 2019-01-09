@@ -335,6 +335,9 @@ P {
   .span_3_of_3, .span_2_of_3, .span_1_of_3 {
     width: 100%;
   }
+  .tab-content {
+    padding: 0.5em 1.5em;
+  }
 }
 
 .party-results {
@@ -382,6 +385,7 @@ P {
   border: solid white;
   border-width: 1px 1px 0 1px;
 }
+
 
 .card-header {
   padding-top: 1em;
